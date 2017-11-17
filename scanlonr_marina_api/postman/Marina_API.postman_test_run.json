@@ -1,0 +1,2718 @@
+{
+	"id": "75afecc9-a0e0-469e-bf39-1266da7b1b95",
+	"name": "Marina_API",
+	"allTests": [],
+	"timestamp": "2017-10-15T18:38:14.769Z",
+	"collection_id": "d8f94635-3178-b13b-3ceb-2a01a9fcc6e2",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "3715c6da-321c-8ac4-a616-837c0a32e225",
+	"data": [],
+	"delay": "1500",
+	"count": 1,
+	"collection": {
+		"id": "d8f94635-3178-b13b-3ceb-2a01a9fcc6e2",
+		"name": "Marina_API",
+		"description": null,
+		"order": [
+			"d3368840-0129-8be0-78be-e48556d63729",
+			"f59743e5-f653-006d-2517-2d41ddb530c0",
+			"26406ce6-65be-5d75-2e8b-659e209b1d95",
+			"fc594fb1-7e3b-3b3f-91df-eacaf99a5196",
+			"d278171a-144c-3395-033a-1138116e0e15",
+			"4909f73f-2cd5-f5c8-fb04-307d12e92fac",
+			"fab6d728-6d82-897e-ffcc-6d416966f15d",
+			"a7573993-322c-504c-a393-86c37fa4349e",
+			"9af85b39-208c-589f-8391-8e3b0a61bb4e",
+			"2a12745f-0414-2375-1ad3-79b0d03d95fc",
+			"2b43a306-f080-2f75-5481-81e3b1494342",
+			"1c7f9df1-fec5-cd9f-c685-e9c01a9b4213",
+			"dbe3502d-fa27-5074-4b9f-116a2310f286",
+			"9dcf71d6-f6d2-da57-a443-b0a2002e7863",
+			"e097ae3c-9390-003d-8fec-6c65b0cc99a1",
+			"c3f3d60b-5703-8f46-5898-b9323d87c8ff",
+			"ec2148ab-3725-b9e3-eac4-24bd5d3996fd",
+			"adbc8c66-1fac-53a9-ddfe-3a27bfaf8311",
+			"69d6f4aa-64e8-1bb1-132e-294a7669f13b",
+			"aa6b50bf-4f8c-75a5-9a72-ecb510fa0e4d",
+			"07718bb2-54a6-3345-8a04-396df08d5a03",
+			"3275b49b-7ccd-b732-ba21-82715d45ab78",
+			"4a2ee6fb-ef63-e8f2-383f-6afb147b8497",
+			"31caf6b6-763d-1a3c-455a-bc063b6d925b",
+			"e53837c9-c479-e3ca-63d6-7c4f2cdc62ee",
+			"dc26776c-f443-7a60-317d-e0b13106c665",
+			"41fc3733-0545-c9e6-7ed5-f0262e58a326",
+			"286ac829-0315-4812-b872-63b68c5d081b",
+			"3b8d093f-be8d-5f7b-1215-a958784866bc",
+			"da39a7d8-c8c6-09f8-829f-7b873f31c8d5",
+			"2042cfbc-4240-3ae0-27dd-c0258a2d6e24",
+			"b6c7de0d-41db-f328-cec4-fea60aa76e4a",
+			"95595ac2-c3df-0060-2517-94baa023076a",
+			"6e752339-1822-f51e-3496-b6e555ad51ab",
+			"7f6184d4-6824-00a9-da66-5a1fdd10f25e",
+			"e1ceaf21-924d-2ab1-03c5-bf02244fe129",
+			"a75c9e91-7575-ea2f-514e-0d3964a06e7f",
+			"ab5682cc-09eb-8656-3ee1-c292e2560479",
+			"edd73701-4c8c-7b1c-8b49-dc5c3ff71cc9",
+			"d2aeaa8a-d4bd-b3f3-f55e-624f6f6877ff",
+			"446d20c7-0c1a-edfc-caf3-ab4f39a86cba",
+			"fc1d9c8d-1642-56f6-d510-db978cb8c17a",
+			"0c4ecdf9-e9ef-db68-716e-e80148cd03c4",
+			"e4c2a443-e29a-1812-c3af-78654baa7f78",
+			"d4495ab4-44d5-aa12-607d-3969d0a3eeb5",
+			"cd059abc-65ea-4d0d-8fb3-8885a3c6c302",
+			"18e34ed4-0202-833e-05ce-afdf6e34a77d"
+		],
+		"folders": [],
+		"folders_order": [],
+		"timestamp": 1508017194525,
+		"synced": false,
+		"remote_id": "0",
+		"owner": "2836402",
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": null,
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": "2017-10-14T21:39:54.000Z",
+		"updatedAt": 1508089516106,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "createdGistContent",
+			"value": "This is some text making up the Gist!",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "latestGistID",
+			"value": "7ada48362fc2ac8701535e6295e567aa",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "updatedGistContent",
+			"value": "This Gist has been updated!",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "starredGistsBefore",
+			"value": 1,
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "userPublicGists_before",
+			"value": 11,
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "New_Boat_ID",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "New_Boat_Self",
+			"value": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "New_Slip_Self",
+			"value": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "New_Slip_ID",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "b1_self",
+			"value": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "b2_self",
+			"value": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAvNWTCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "b3_self",
+			"value": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA7a2SCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "s1_self",
+			"value": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAgOSRCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "s2_self",
+			"value": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAq_OHCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "slip_with_new_boat",
+			"value": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "b1_id",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "b2_id",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAvNWTCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "b3_id",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA7a2SCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "s1_id",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAgOSRCgw",
+			"enabled": true,
+			"type": "text"
+		},
+		{
+			"key": "s2_id",
+			"value": "ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAq_OHCgw",
+			"enabled": true,
+			"type": "text"
+		}
+	],
+	"results": [
+		{
+			"name": "create boat 1 {{Base_URL}}/boat",
+			"id": "d3368840-0129-8be0-78be-e48556d63729",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"387"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "387",
+			"totalRequestTime": "387",
+			"iterationResults": {}
+		},
+		{
+			"name": "create boat 2 {{Base_URL}}/boat",
+			"id": "f59743e5-f653-006d-2517-2d41ddb530c0",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"226"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "226",
+			"totalRequestTime": "226",
+			"iterationResults": {}
+		},
+		{
+			"name": "create boat 3 {{Base_URL}}/boat",
+			"id": "26406ce6-65be-5d75-2e8b-659e209b1d95",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"166"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "166",
+			"totalRequestTime": "166",
+			"iterationResults": {}
+		},
+		{
+			"name": "create slip 1 {{Base_URL}}/slip",
+			"id": "fc594fb1-7e3b-3b3f-91df-eacaf99a5196",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"112"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "112",
+			"totalRequestTime": "112",
+			"iterationResults": {}
+		},
+		{
+			"name": "create slip 2 {{Base_URL}}/slip",
+			"id": "d278171a-144c-3395-033a-1138116e0e15",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"196"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "196",
+			"totalRequestTime": "196",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm all boats and slips listed {{Base_URL}}",
+			"id": "4909f73f-2cd5-f5c8-fb04-307d12e92fac",
+			"url": "https://stable-splicer-182920.appspot.com/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"All boats listed": true,
+				"All slips listed": true
+			},
+			"testPassFailCounts": {
+				"All boats listed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All slips listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"111"
+			],
+			"allTests": [
+				{
+					"All boats listed": true,
+					"All slips listed": true
+				}
+			],
+			"time": "111",
+			"totalRequestTime": "111",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm all boats listed {{Base_URL}}/boat",
+			"id": "fab6d728-6d82-897e-ffcc-6d416966f15d",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"All boats listed": true
+			},
+			"testPassFailCounts": {
+				"All boats listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"49"
+			],
+			"allTests": [
+				{
+					"All boats listed": true
+				}
+			],
+			"time": "49",
+			"totalRequestTime": "49",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm all slips listed {{Base_URL}}\\slip",
+			"id": "a7573993-322c-504c-a393-86c37fa4349e",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"All slips listed": true
+			},
+			"testPassFailCounts": {
+				"All slips listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"36"
+			],
+			"allTests": [
+				{
+					"All slips listed": true
+				}
+			],
+			"time": "36",
+			"totalRequestTime": "36",
+			"iterationResults": {}
+		},
+		{
+			"name": "create a new boat {{Base_URL}}/boat",
+			"id": "9af85b39-208c-589f-8391-8e3b0a61bb4e",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"New Boat has correct name": true,
+				"New Boat has correct type": true,
+				"New Boat has correct length": true,
+				"Boat starts at sea": true
+			},
+			"testPassFailCounts": {
+				"New Boat has correct name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct length": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat starts at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"108"
+			],
+			"allTests": [
+				{
+					"New Boat has correct name": true,
+					"New Boat has correct type": true,
+					"New Boat has correct length": true,
+					"Boat starts at sea": true
+				}
+			],
+			"time": "108",
+			"totalRequestTime": "108",
+			"iterationResults": {}
+		},
+		{
+			"name": "follow new boat self link {{New_Boat_Self}}",
+			"id": "2a12745f-0414-2375-1ad3-79b0d03d95fc",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"New Boat has correct name": true,
+				"New Boat has correct type": true,
+				"New Boat has correct length": true,
+				"New Boat ID is correct": true,
+				"Boat starts at sea": true
+			},
+			"testPassFailCounts": {
+				"New Boat has correct name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct length": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat ID is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat starts at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"42"
+			],
+			"allTests": [
+				{
+					"New Boat has correct name": true,
+					"New Boat has correct type": true,
+					"New Boat has correct length": true,
+					"New Boat ID is correct": true,
+					"Boat starts at sea": true
+				}
+			],
+			"time": "42",
+			"totalRequestTime": "42",
+			"iterationResults": {}
+		},
+		{
+			"name": "create a new slip {{Base_URL}}/slip",
+			"id": "2b43a306-f080-2f75-5481-81e3b1494342",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"Slip number is correct": true,
+				"Slip is empty": true,
+				"Slip has no arrival date": true,
+				"Departure history is empty list": true
+			},
+			"testPassFailCounts": {
+				"Slip number is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip has no arrival date": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Departure history is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"131"
+			],
+			"allTests": [
+				{
+					"Slip number is correct": true,
+					"Slip is empty": true,
+					"Slip has no arrival date": true,
+					"Departure history is empty list": true
+				}
+			],
+			"time": "131",
+			"totalRequestTime": "131",
+			"iterationResults": {}
+		},
+		{
+			"name": "follow new slip self link {{New_Slip_Self}}",
+			"id": "1c7f9df1-fec5-cd9f-c685-e9c01a9b4213",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Slip number is correct": true,
+				"Slip is empty": true,
+				"Slip has no arrival date": true,
+				"Departure history is empty list": true,
+				"Slip id is correct": true
+			},
+			"testPassFailCounts": {
+				"Slip number is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip has no arrival date": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Departure history is empty list": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip id is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"43"
+			],
+			"allTests": [
+				{
+					"Slip number is correct": true,
+					"Slip is empty": true,
+					"Slip has no arrival date": true,
+					"Departure history is empty list": true,
+					"Slip id is correct": true
+				}
+			],
+			"time": "43",
+			"totalRequestTime": "43",
+			"iterationResults": {}
+		},
+		{
+			"name": "dock new boat {{New_Boat_Self}}/at_sea",
+			"id": "dbe3502d-fa27-5074-4b9f-116a2310f286",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Boat is not at sea": true
+			},
+			"testPassFailCounts": {
+				"Boat is not at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"125"
+			],
+			"allTests": [
+				{
+					"Boat is not at sea": true
+				}
+			],
+			"time": "125",
+			"totalRequestTime": "125",
+			"iterationResults": {}
+		},
+		{
+			"name": "docked boat is found at a slip {{Base_URL}}/slip",
+			"id": "9dcf71d6-f6d2-da57-a443-b0a2002e7863",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"New Boat found at a slip": true,
+				"Current boat is correct": true,
+				"Arrival date is correct": true
+			},
+			"testPassFailCounts": {
+				"New Boat found at a slip": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Current boat is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Arrival date is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"60"
+			],
+			"allTests": [
+				{
+					"New Boat found at a slip": true,
+					"Current boat is correct": true,
+					"Arrival date is correct": true
+				}
+			],
+			"time": "60",
+			"totalRequestTime": "60",
+			"iterationResults": {}
+		},
+		{
+			"name": "undock new boat {{New_Boat_Self}}/at_sea",
+			"id": "e097ae3c-9390-003d-8fec-6c65b0cc99a1",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Boat is now back at sea": true
+			},
+			"testPassFailCounts": {
+				"Boat is now back at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"296"
+			],
+			"allTests": [
+				{
+					"Boat is now back at sea": true
+				}
+			],
+			"time": "296",
+			"totalRequestTime": "296",
+			"iterationResults": {}
+		},
+		{
+			"name": "boat was undocked, slip updated {{slip_with_new_boat}}",
+			"id": "c3f3d60b-5703-8f46-5898-b9323d87c8ff",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Current boat is reset": true,
+				"Arrival date is reset": true,
+				"Departure date is added to history": true,
+				"Boat is added to departure history": true
+			},
+			"testPassFailCounts": {
+				"Current boat is reset": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Arrival date is reset": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Departure date is added to history": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat is added to departure history": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"184"
+			],
+			"allTests": [
+				{
+					"Current boat is reset": true,
+					"Arrival date is reset": true,
+					"Departure date is added to history": true,
+					"Boat is added to departure history": true
+				}
+			],
+			"time": "184",
+			"totalRequestTime": "184",
+			"iterationResults": {}
+		},
+		{
+			"name": "dock boat 1 {{b1_self}}/at_sea",
+			"id": "ec2148ab-3725-b9e3-eac4-24bd5d3996fd",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"188"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "188",
+			"totalRequestTime": "188",
+			"iterationResults": {}
+		},
+		{
+			"name": "dock boat 2 {{b2_self}}/at_sea",
+			"id": "adbc8c66-1fac-53a9-ddfe-3a27bfaf8311",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAvNWTCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"207"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "207",
+			"totalRequestTime": "207",
+			"iterationResults": {}
+		},
+		{
+			"name": "dock boat 3 {{b3_self}}/at_sea",
+			"id": "69d6f4aa-64e8-1bb1-132e-294a7669f13b",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA7a2SCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"307"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "307",
+			"totalRequestTime": "307",
+			"iterationResults": {}
+		},
+		{
+			"name": "attemp to dock when no slips open {{New_Boat_Self}}/at_sea",
+			"id": "aa6b50bf-4f8c-75a5-9a72-ecb510fa0e4d",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"Attempt to dock when no slips open produced 403 error": true
+			},
+			"testPassFailCounts": {
+				"Attempt to dock when no slips open produced 403 error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"109"
+			],
+			"allTests": [
+				{
+					"Attempt to dock when no slips open produced 403 error": true
+				}
+			],
+			"time": "109",
+			"totalRequestTime": "109",
+			"iterationResults": {}
+		},
+		{
+			"name": "undock boat 1 {{b1_self}}/at_sea",
+			"id": "07718bb2-54a6-3345-8a04-396df08d5a03",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"294"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "294",
+			"totalRequestTime": "294",
+			"iterationResults": {}
+		},
+		{
+			"name": "dock new boat at next available slip {{New_Boat_Self}}/at_sea",
+			"id": "3275b49b-7ccd-b732-ba21-82715d45ab78",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"158"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "158",
+			"totalRequestTime": "158",
+			"iterationResults": {}
+		},
+		{
+			"name": "locate boat at slip {{Base_URL}}/slip",
+			"id": "4a2ee6fb-ef63-e8f2-383f-6afb147b8497",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"New Boat found at a slip": true
+			},
+			"testPassFailCounts": {
+				"New Boat found at a slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"37"
+			],
+			"allTests": [
+				{
+					"New Boat found at a slip": true
+				}
+			],
+			"time": "37",
+			"totalRequestTime": "37",
+			"iterationResults": {}
+		},
+		{
+			"name": "Modify boat name {{New_Boat_Self}}",
+			"id": "31caf6b6-763d-1a3c-455a-bc063b6d925b",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"61"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "61",
+			"totalRequestTime": "61",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat modify success {{New_Boat_Self}}",
+			"id": "e53837c9-c479-e3ca-63d6-7c4f2cdc62ee",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"boat name was modified": true,
+				"type remains the same": true,
+				"length remains the same": true,
+				"boat remains docked": true
+			},
+			"testPassFailCounts": {
+				"boat name was modified": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type remains the same": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length remains the same": {
+					"pass": 1,
+					"fail": 0
+				},
+				"boat remains docked": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"57"
+			],
+			"allTests": [
+				{
+					"boat name was modified": true,
+					"type remains the same": true,
+					"length remains the same": true,
+					"boat remains docked": true
+				}
+			],
+			"time": "57",
+			"totalRequestTime": "57",
+			"iterationResults": {}
+		},
+		{
+			"name": "request to replace boat without all fields fails {{New_Boat_Self}}",
+			"id": "dc26776c-f443-7a60-317d-e0b13106c665",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Replace boat without all fields fails": true
+			},
+			"testPassFailCounts": {
+				"Replace boat without all fields fails": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"Replace boat without all fields fails": true
+				}
+			],
+			"time": "26",
+			"totalRequestTime": "26",
+			"iterationResults": {}
+		},
+		{
+			"name": "Replace new boat {{New_Boat_Self}}",
+			"id": "41fc3733-0545-c9e6-7ed5-f0262e58a326",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"174"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "174",
+			"totalRequestTime": "174",
+			"iterationResults": {}
+		},
+		{
+			"name": "Replace boat was successful {{New_Boat_Self}}",
+			"id": "286ac829-0315-4812-b872-63b68c5d081b",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"boat name replaced": true,
+				"boat type replaced": true,
+				"boat length replaced": true,
+				"replaced boat is now at sea": true
+			},
+			"testPassFailCounts": {
+				"boat name replaced": {
+					"pass": 1,
+					"fail": 0
+				},
+				"boat type replaced": {
+					"pass": 1,
+					"fail": 0
+				},
+				"boat length replaced": {
+					"pass": 1,
+					"fail": 0
+				},
+				"replaced boat is now at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"69"
+			],
+			"allTests": [
+				{
+					"boat name replaced": true,
+					"boat type replaced": true,
+					"boat length replaced": true,
+					"replaced boat is now at sea": true
+				}
+			],
+			"time": "69",
+			"totalRequestTime": "69",
+			"iterationResults": {}
+		},
+		{
+			"name": "replaced boat is no longer at slip {{slip_with_new_boat}}",
+			"id": "3b8d093f-be8d-5f7b-1215-a958784866bc",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"replaced boat no longer at slip": true
+			},
+			"testPassFailCounts": {
+				"replaced boat no longer at slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"54"
+			],
+			"allTests": [
+				{
+					"replaced boat no longer at slip": true
+				}
+			],
+			"time": "54",
+			"totalRequestTime": "54",
+			"iterationResults": {}
+		},
+		{
+			"name": "redock new boat {{New_Boat_Self}}/at_sea",
+			"id": "da39a7d8-c8c6-09f8-829f-7b873f31c8d5",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"109"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "109",
+			"totalRequestTime": "109",
+			"iterationResults": {}
+		},
+		{
+			"name": "locate boat again at slip {{Base_URL}}/slip",
+			"id": "2042cfbc-4240-3ae0-27dd-c0258a2d6e24",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"New Boat found at a slip": true
+			},
+			"testPassFailCounts": {
+				"New Boat found at a slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"39"
+			],
+			"allTests": [
+				{
+					"New Boat found at a slip": true
+				}
+			],
+			"time": "39",
+			"totalRequestTime": "39",
+			"iterationResults": {}
+		},
+		{
+			"name": "cannot have duplicate slip numbers {{slip_with_new_boat}}",
+			"id": "b6c7de0d-41db-f328-cec4-fea60aa76e4a",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"cannot change slip number to a number of another slip": true
+			},
+			"testPassFailCounts": {
+				"cannot change slip number to a number of another slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"135"
+			],
+			"allTests": [
+				{
+					"cannot change slip number to a number of another slip": true
+				}
+			],
+			"time": "135",
+			"totalRequestTime": "135",
+			"iterationResults": {}
+		},
+		{
+			"name": "modify slip containing our boat {{slip_with_new_boat}}",
+			"id": "95595ac2-c3df-0060-2517-94baa023076a",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"59"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "59",
+			"totalRequestTime": "59",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm slip was modified {{slip_with_new_boat}}",
+			"id": "6e752339-1822-f51e-3496-b6e555ad51ab",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"confirm slip was modified": true
+			},
+			"testPassFailCounts": {
+				"confirm slip was modified": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"185"
+			],
+			"allTests": [
+				{
+					"confirm slip was modified": true
+				}
+			],
+			"time": "185",
+			"totalRequestTime": "185",
+			"iterationResults": {}
+		},
+		{
+			"name": "replace slip without new number fails {{slip_with_new_boat}}",
+			"id": "7f6184d4-6824-00a9-da66-5a1fdd10f25e",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"attempt to replace slip without a new number fails": true
+			},
+			"testPassFailCounts": {
+				"attempt to replace slip without a new number fails": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"31"
+			],
+			"allTests": [
+				{
+					"attempt to replace slip without a new number fails": true
+				}
+			],
+			"time": "31",
+			"totalRequestTime": "31",
+			"iterationResults": {}
+		},
+		{
+			"name": "replace slip containing our boat {{slip_with_new_boat}}",
+			"id": "e1ceaf21-924d-2ab1-03c5-bf02244fe129",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"259"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "259",
+			"totalRequestTime": "259",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm slip replacement is correct {{slip_with_new_boat}}",
+			"id": "a75c9e91-7575-ea2f-514e-0d3964a06e7f",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"replaced slip number correct": true,
+				"all other fields cleared": true
+			},
+			"testPassFailCounts": {
+				"replaced slip number correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"all other fields cleared": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"40"
+			],
+			"allTests": [
+				{
+					"replaced slip number correct": true,
+					"all other fields cleared": true
+				}
+			],
+			"time": "40",
+			"totalRequestTime": "40",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm boat at replaced slip is now at sea {{New_Boat_Self}}",
+			"id": "ab5682cc-09eb-8656-3ee1-c292e2560479",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"boat occupying replaced slip is now at sea": true
+			},
+			"testPassFailCounts": {
+				"boat occupying replaced slip is now at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"47"
+			],
+			"allTests": [
+				{
+					"boat occupying replaced slip is now at sea": true
+				}
+			],
+			"time": "47",
+			"totalRequestTime": "47",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete new boat {{New_Boat_Self}}",
+			"id": "edd73701-4c8c-7b1c-8b49-dc5c3ff71cc9",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"51"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "51",
+			"totalRequestTime": "51",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm boat is deleted {{Base_URL}}boat",
+			"id": "d2aeaa8a-d4bd-b3f3-f55e-624f6f6877ff",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Deleted boat is not listed": true
+			},
+			"testPassFailCounts": {
+				"Deleted boat is not listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"33"
+			],
+			"allTests": [
+				{
+					"Deleted boat is not listed": true
+				}
+			],
+			"time": "33",
+			"totalRequestTime": "33",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete new slip {{New_Slip_Self}}",
+			"id": "446d20c7-0c1a-edfc-caf3-ab4f39a86cba",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"45"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "45",
+			"totalRequestTime": "45",
+			"iterationResults": {}
+		},
+		{
+			"name": "confirm slip is deleted {{Base_URL}}slip",
+			"id": "fc1d9c8d-1642-56f6-d510-db978cb8c17a",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Deleted slip is not listed": true
+			},
+			"testPassFailCounts": {
+				"Deleted slip is not listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"31"
+			],
+			"allTests": [
+				{
+					"Deleted slip is not listed": true
+				}
+			],
+			"time": "31",
+			"totalRequestTime": "31",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete boat 1 {{b1_self}}",
+			"id": "0c4ecdf9-e9ef-db68-716e-e80148cd03c4",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"129"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "129",
+			"totalRequestTime": "129",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete boat 2 {{b2_self}}",
+			"id": "e4c2a443-e29a-1812-c3af-78654baa7f78",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAvNWTCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"109"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "109",
+			"totalRequestTime": "109",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete boat 3 {{b3_self}}",
+			"id": "d4495ab4-44d5-aa12-607d-3969d0a3eeb5",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA7a2SCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"182"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "182",
+			"totalRequestTime": "182",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete slip 1 {{s1_self}}",
+			"id": "cd059abc-65ea-4d0d-8fb3-8885a3c6c302",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAgOSRCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"213"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "213",
+			"totalRequestTime": "213",
+			"iterationResults": {}
+		},
+		{
+			"name": "delete slip 2 {{s2_self}}",
+			"id": "18e34ed4-0202-833e-05ce-afdf6e34a77d",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAq_OHCgw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"73"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "73",
+			"totalRequestTime": "73",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 52,
+	"totalFail": 0,
+	"totalTime": 5783,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "create boat 1 {{Base_URL}}/boat",
+			"id": "d3368840-0129-8be0-78be-e48556d63729",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "create boat 2 {{Base_URL}}/boat",
+			"id": "f59743e5-f653-006d-2517-2d41ddb530c0",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "create boat 3 {{Base_URL}}/boat",
+			"id": "26406ce6-65be-5d75-2e8b-659e209b1d95",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "create slip 1 {{Base_URL}}/slip",
+			"id": "fc594fb1-7e3b-3b3f-91df-eacaf99a5196",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "create slip 2 {{Base_URL}}/slip",
+			"id": "d278171a-144c-3395-033a-1138116e0e15",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Confirm all boats and slips listed {{Base_URL}}",
+			"id": "4909f73f-2cd5-f5c8-fb04-307d12e92fac",
+			"url": "https://stable-splicer-182920.appspot.com/",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"All boats listed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All slips listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "confirm all boats listed {{Base_URL}}/boat",
+			"id": "fab6d728-6d82-897e-ffcc-6d416966f15d",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"All boats listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "confirm all slips listed {{Base_URL}}\\slip",
+			"id": "a7573993-322c-504c-a393-86c37fa4349e",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"All slips listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "create a new boat {{Base_URL}}/boat",
+			"id": "9af85b39-208c-589f-8391-8e3b0a61bb4e",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"New Boat has correct name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct length": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat starts at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "follow new boat self link {{New_Boat_Self}}",
+			"id": "2a12745f-0414-2375-1ad3-79b0d03d95fc",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"New Boat has correct name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat has correct length": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New Boat ID is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat starts at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "create a new slip {{Base_URL}}/slip",
+			"id": "2b43a306-f080-2f75-5481-81e3b1494342",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Slip number is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip has no arrival date": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Departure history is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "follow new slip self link {{New_Slip_Self}}",
+			"id": "1c7f9df1-fec5-cd9f-c685-e9c01a9b4213",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Slip number is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip has no arrival date": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Departure history is empty list": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip id is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "dock new boat {{New_Boat_Self}}/at_sea",
+			"id": "dbe3502d-fa27-5074-4b9f-116a2310f286",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Boat is not at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "docked boat is found at a slip {{Base_URL}}/slip",
+			"id": "9dcf71d6-f6d2-da57-a443-b0a2002e7863",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"New Boat found at a slip": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Current boat is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Arrival date is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "undock new boat {{New_Boat_Self}}/at_sea",
+			"id": "e097ae3c-9390-003d-8fec-6c65b0cc99a1",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Boat is now back at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "boat was undocked, slip updated {{slip_with_new_boat}}",
+			"id": "c3f3d60b-5703-8f46-5898-b9323d87c8ff",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Current boat is reset": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Arrival date is reset": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Departure date is added to history": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat is added to departure history": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "dock boat 1 {{b1_self}}/at_sea",
+			"id": "ec2148ab-3725-b9e3-eac4-24bd5d3996fd",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "dock boat 2 {{b2_self}}/at_sea",
+			"id": "adbc8c66-1fac-53a9-ddfe-3a27bfaf8311",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAvNWTCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "dock boat 3 {{b3_self}}/at_sea",
+			"id": "69d6f4aa-64e8-1bb1-132e-294a7669f13b",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA7a2SCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "attemp to dock when no slips open {{New_Boat_Self}}/at_sea",
+			"id": "aa6b50bf-4f8c-75a5-9a72-ecb510fa0e4d",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"Attempt to dock when no slips open produced 403 error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "undock boat 1 {{b1_self}}/at_sea",
+			"id": "07718bb2-54a6-3345-8a04-396df08d5a03",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "dock new boat at next available slip {{New_Boat_Self}}/at_sea",
+			"id": "3275b49b-7ccd-b732-ba21-82715d45ab78",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "locate boat at slip {{Base_URL}}/slip",
+			"id": "4a2ee6fb-ef63-e8f2-383f-6afb147b8497",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"New Boat found at a slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Modify boat name {{New_Boat_Self}}",
+			"id": "31caf6b6-763d-1a3c-455a-bc063b6d925b",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Boat modify success {{New_Boat_Self}}",
+			"id": "e53837c9-c479-e3ca-63d6-7c4f2cdc62ee",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"boat name was modified": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type remains the same": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length remains the same": {
+					"pass": 1,
+					"fail": 0
+				},
+				"boat remains docked": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "request to replace boat without all fields fails {{New_Boat_Self}}",
+			"id": "dc26776c-f443-7a60-317d-e0b13106c665",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Replace boat without all fields fails": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Replace new boat {{New_Boat_Self}}",
+			"id": "41fc3733-0545-c9e6-7ed5-f0262e58a326",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Replace boat was successful {{New_Boat_Self}}",
+			"id": "286ac829-0315-4812-b872-63b68c5d081b",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"boat name replaced": {
+					"pass": 1,
+					"fail": 0
+				},
+				"boat type replaced": {
+					"pass": 1,
+					"fail": 0
+				},
+				"boat length replaced": {
+					"pass": 1,
+					"fail": 0
+				},
+				"replaced boat is now at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "replaced boat is no longer at slip {{slip_with_new_boat}}",
+			"id": "3b8d093f-be8d-5f7b-1215-a958784866bc",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"replaced boat no longer at slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "redock new boat {{New_Boat_Self}}/at_sea",
+			"id": "da39a7d8-c8c6-09f8-829f-7b873f31c8d5",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw/at_sea",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "locate boat again at slip {{Base_URL}}/slip",
+			"id": "2042cfbc-4240-3ae0-27dd-c0258a2d6e24",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"New Boat found at a slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "cannot have duplicate slip numbers {{slip_with_new_boat}}",
+			"id": "b6c7de0d-41db-f328-cec4-fea60aa76e4a",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"cannot change slip number to a number of another slip": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "modify slip containing our boat {{slip_with_new_boat}}",
+			"id": "95595ac2-c3df-0060-2517-94baa023076a",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "confirm slip was modified {{slip_with_new_boat}}",
+			"id": "6e752339-1822-f51e-3496-b6e555ad51ab",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"confirm slip was modified": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "replace slip without new number fails {{slip_with_new_boat}}",
+			"id": "7f6184d4-6824-00a9-da66-5a1fdd10f25e",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"attempt to replace slip without a new number fails": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "replace slip containing our boat {{slip_with_new_boat}}",
+			"id": "e1ceaf21-924d-2ab1-03c5-bf02244fe129",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "confirm slip replacement is correct {{slip_with_new_boat}}",
+			"id": "a75c9e91-7575-ea2f-514e-0d3964a06e7f",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"replaced slip number correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"all other fields cleared": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "confirm boat at replaced slip is now at sea {{New_Boat_Self}}",
+			"id": "ab5682cc-09eb-8656-3ee1-c292e2560479",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"boat occupying replaced slip is now at sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "delete new boat {{New_Boat_Self}}",
+			"id": "edd73701-4c8c-7b1c-8b49-dc5c3ff71cc9",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA2reXCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "confirm boat is deleted {{Base_URL}}boat",
+			"id": "d2aeaa8a-d4bd-b3f3-f55e-624f6f6877ff",
+			"url": "https://stable-splicer-182920.appspot.com/boat",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Deleted boat is not listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "delete new slip {{New_Slip_Self}}",
+			"id": "446d20c7-0c1a-edfc-caf3-ab4f39a86cba",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAr8iACgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "confirm slip is deleted {{Base_URL}}slip",
+			"id": "fc1d9c8d-1642-56f6-d510-db978cb8c17a",
+			"url": "https://stable-splicer-182920.appspot.com/slip",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Deleted slip is not listed": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "delete boat 1 {{b1_self}}",
+			"id": "0c4ecdf9-e9ef-db68-716e-e80148cd03c4",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAmc6UCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "delete boat 2 {{b2_self}}",
+			"id": "e4c2a443-e29a-1812-c3af-78654baa7f78",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICAvNWTCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "delete boat 3 {{b3_self}}",
+			"id": "d4495ab4-44d5-aa12-607d-3969d0a3eeb5",
+			"url": "https://stable-splicer-182920.appspot.com/boat/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEQm9hdBiAgICA7a2SCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "delete slip 1 {{s1_self}}",
+			"id": "cd059abc-65ea-4d0d-8fb3-8885a3c6c302",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAgOSRCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "delete slip 2 {{s2_self}}",
+			"id": "18e34ed4-0202-833e-05ce-afdf6e34a77d",
+			"url": "https://stable-splicer-182920.appspot.com/slip/ahdkfnN0YWJsZS1zcGxpY2VyLTE4MjkyMHIRCxIEU2xpcBiAgICAq_OHCgw",
+			"time": "2017-10-15T18:38:14.769Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}

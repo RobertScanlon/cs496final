@@ -1,0 +1,1611 @@
+{
+	"info": {
+		"name": "Marina_API",
+		"_postman_id": "d8f94635-3178-b13b-3ceb-2a01a9fcc6e2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create boat 1 {{Base_URL}}/boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"b1_self\", JSON.parse(responseBody).self);",
+							"pm.globals.set(\"b1_id\", JSON.parse(responseBody).id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Andrea Gail\",\n\t\"type\": \"Commercial Fishing Vessel\",\n\t\"length\": 72\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}boat",
+					"host": [
+						"{{Base_URL}}boat"
+					]
+				},
+				"description": "create boat 1"
+			},
+			"response": []
+		},
+		{
+			"name": "create boat 2 {{Base_URL}}/boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"b2_self\", JSON.parse(responseBody).self);",
+							"pm.globals.set(\"b2_id\", JSON.parse(responseBody).id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"American Queen\",\n\t\"type\": \"River Steamer\",\n\t\"length\": 418\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}boat",
+					"host": [
+						"{{Base_URL}}boat"
+					]
+				},
+				"description": "create boat 2"
+			},
+			"response": []
+		},
+		{
+			"name": "create boat 3 {{Base_URL}}/boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"b3_self\", JSON.parse(responseBody).self);",
+							"pm.globals.set(\"b3_id\", JSON.parse(responseBody).id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"USS Arizona\",\n\t\"type\": \"Battleship\",\n\t\"length\": 608\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}boat",
+					"host": [
+						"{{Base_URL}}boat"
+					]
+				},
+				"description": "create boat 3"
+			},
+			"response": []
+		},
+		{
+			"name": "create slip 1 {{Base_URL}}/slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"s1_self\", JSON.parse(responseBody).self);",
+							"pm.globals.set(\"s1_id\", JSON.parse(responseBody).id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 0\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}slip",
+					"host": [
+						"{{Base_URL}}slip"
+					]
+				},
+				"description": "create slip 1"
+			},
+			"response": []
+		},
+		{
+			"name": "create slip 2 {{Base_URL}}/slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"s2_self\", JSON.parse(responseBody).self);",
+							"pm.globals.set(\"s2_id\", JSON.parse(responseBody).id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}slip",
+					"host": [
+						"{{Base_URL}}slip"
+					]
+				},
+				"description": "create slip 2"
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm all boats and slips listed {{Base_URL}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"var boats = res.Boats;",
+							"var slips = res.Slips;",
+							"",
+							"var b1 = false;",
+							"var b2 = false;",
+							"var b3 = false;",
+							"",
+							"var s1 = false;",
+							"var s2 = false;",
+							"",
+							"for (var i = 0; i < boats.length; i++) {",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"b1_id\"))) {",
+							"        b1 = true;",
+							"    }",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"b2_id\"))) {",
+							"        b2 = true;",
+							"    }",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"b3_id\"))) {",
+							"        b3 = true;",
+							"    }",
+							"}",
+							"",
+							"for (var i = 0; i < slips.length; i++) {",
+							"    if (String(slips[i].id) === String(pm.globals.get(\"s1_id\"))) {",
+							"        s1 = true;",
+							"    }",
+							"    if (String(slips[i].id) === String(pm.globals.get(\"s2_id\"))) {",
+							"        s2 = true;",
+							"    }",
+							"}",
+							"",
+							"tests['All boats listed'] =",
+							"b1 === true && b2 === true && b3 === true;",
+							"",
+							"tests['All slips listed'] =",
+							"s1 === true && s2 === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}",
+					"host": [
+						"{{Base_URL}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "confirm all boats listed {{Base_URL}}/boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var boats = JSON.parse(responseBody);",
+							"",
+							"var b1 = false;",
+							"var b2 = false;",
+							"var b3 = false;",
+							"",
+							"for (var i = 0; i < boats.length; i++) {",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"b1_id\"))) {",
+							"        b1 = true;",
+							"    }",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"b2_id\"))) {",
+							"        b2 = true;",
+							"    }",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"b3_id\"))) {",
+							"        b3 = true;",
+							"    }",
+							"}",
+							"",
+							"tests['All boats listed'] =",
+							"b1 === true && b2 === true && b3 === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}boat",
+					"host": [
+						"{{Base_URL}}boat"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "confirm all slips listed {{Base_URL}}\\slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var slips = JSON.parse(responseBody);",
+							"",
+							"var s1 = false;",
+							"var s2 = false;",
+							"",
+							"for (var i = 0; i < slips.length; i++) {",
+							"    if (String(slips[i].id) === String(pm.globals.get(\"s1_id\"))) {",
+							"        s1 = true;",
+							"    }",
+							"    if (String(slips[i].id) === String(pm.globals.get(\"s2_id\"))) {",
+							"        s2 = true;",
+							"    }",
+							"}",
+							"",
+							"tests['All slips listed'] =",
+							"s1 === true && s2 === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}slip",
+					"host": [
+						"{{Base_URL}}slip"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create a new boat {{Base_URL}}/boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// check that all new boat params were accepted",
+							"tests['New Boat has correct name'] = ",
+							"res.name === \"New Boat\";",
+							"tests['New Boat has correct type'] = ",
+							"res.type === \"New Boat Type\";",
+							"tests['New Boat has correct length'] = ",
+							"String(res.length) === \"25\";",
+							"",
+							"// check that boat is set to 'at_sea'",
+							"tests['Boat starts at sea'] = ",
+							"String(res.at_sea) === \"True\";",
+							"",
+							"console.log(res.at_sea);",
+							"",
+							"// set id of new boat",
+							"pm.globals.set(\"New_Boat_ID\", res.id);",
+							"",
+							"// set self link of new boat",
+							"pm.globals.set(\"New_Boat_Self\", res.self);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"New Boat\",\n\t\"type\": \"New Boat Type\",\n\t\"length\": 25\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}/boat",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"boat"
+					]
+				},
+				"description": "Create a new boat"
+			},
+			"response": []
+		},
+		{
+			"name": "follow new boat self link {{New_Boat_Self}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// check that all new boat params are correct",
+							"tests['New Boat has correct name'] = ",
+							"res.name === \"New Boat\";",
+							"tests['New Boat has correct type'] = ",
+							"res.type === \"New Boat Type\";",
+							"tests['New Boat has correct length'] = ",
+							"String(res.length) === \"25\";",
+							"tests['New Boat ID is correct'] =",
+							"String(pm.globals.get(\"New_Boat_ID\")) ===",
+							"String(res.id);",
+							"",
+							"// check that boat is set to 'at_sea'",
+							"tests['Boat starts at sea'] = ",
+							"String(res.at_sea) === \"True\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": "Follow self link for new boat and confirm that properties are correct"
+			},
+			"response": []
+		},
+		{
+			"name": "create a new slip {{Base_URL}}/slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// confirm slip number is correct",
+							"tests['Slip number is correct'] = ",
+							"String(res.number) === \"37\";",
+							"",
+							"// confirm current boat, arrival date,",
+							"// and departure history are all empty",
+							"tests['Slip is empty'] =",
+							"String(res.current_boat) === \"None\";",
+							"tests['Slip has no arrival date'] =",
+							"String(res.arrival_date) === \"None\";",
+							"tests['Departure history is empty list'] =",
+							"String(res.departure_history) === \"[]\";",
+							"",
+							"// set new slip self link",
+							"pm.globals.set(\"New_Slip_Self\", res.self);",
+							"",
+							"// set new slip id",
+							"pm.globals.set(\"New_Slip_ID\", res.id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 37\n}"
+				},
+				"url": {
+					"raw": "{{Base_URL}}/slip",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": "Create a new slip"
+			},
+			"response": []
+		},
+		{
+			"name": "follow new slip self link {{New_Slip_Self}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// confirm slip number is correct",
+							"tests['Slip number is correct'] = ",
+							"String(res.number) === \"37\";",
+							"",
+							"// confirm current boat, arrival date,",
+							"// and departure history are all empty",
+							"tests['Slip is empty'] =",
+							"String(res.current_boat) === \"None\";",
+							"tests['Slip has no arrival date'] =",
+							"String(res.arrival_date) === \"None\";",
+							"tests['Departure history is empty list'] =",
+							"String(res.departure_history) === \"[]\";",
+							"",
+							"// confirm new slip id",
+							"tests['Slip id is correct'] =",
+							"String(res.id) ===",
+							"String(pm.globals.get(\"New_Slip_ID\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Slip_Self}}",
+					"host": [
+						"{{New_Slip_Self}}"
+					]
+				},
+				"description": "Follow new slip self link and confirm properties are correct"
+			},
+			"response": []
+		},
+		{
+			"name": "dock new boat {{New_Boat_Self}}/at_sea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// boat is no longer at sea",
+							"tests['Boat is not at sea'] =",
+							"String(res.at_sea) === \"False\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"10/15/17\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}/at_sea",
+					"host": [
+						"{{New_Boat_Self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": "dock new boat, check at_sea"
+			},
+			"response": []
+		},
+		{
+			"name": "docked boat is found at a slip {{Base_URL}}/slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"var found_boat = false;",
+							"var idx;",
+							"for (var i = 0; i < res.length; i++) {",
+							"    if (res[i].current_boat) {",
+							"        if (String(res[i].current_boat) === String(pm.globals.get(\"New_Boat_ID\"))) {",
+							"            found_boat = true;",
+							"            pm.globals.set(\"slip_with_new_boat\", res[i].self);",
+							"            idx = i;",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"tests['New Boat found at a slip'] =",
+							"found_boat === true;",
+							"",
+							"tests['Current boat is correct'] =",
+							"String(res[idx].current_boat) === String(pm.globals.get(\"New_Boat_ID\"));",
+							"",
+							"tests['Arrival date is correct'] =",
+							"String(res[idx].arrival_date) === \"10/15/17\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}/slip",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": "docked boat is found at a slip"
+			},
+			"response": []
+		},
+		{
+			"name": "undock new boat {{New_Boat_Self}}/at_sea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// check that boat is now back at sea",
+							"tests['Boat is now back at sea'] =",
+							"String(res.at_sea) === \"True\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"departure_date\": \"10/16/17\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}/at_sea",
+					"host": [
+						"{{New_Boat_Self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": "undock new boat and check that it is at sea again"
+			},
+			"response": []
+		},
+		{
+			"name": "boat was undocked, slip updated {{slip_with_new_boat}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"// current boat, arrival date, and dep_hist",
+							"// are updated correctly",
+							"tests['Current boat is reset'] =",
+							"String(res.current_boat) === \"None\";",
+							"",
+							"tests['Arrival date is reset'] =",
+							"String(res.arrival_date) === \"None\";",
+							"",
+							"tests['Departure date is added to history'] =",
+							"String(res.departure_history).indexOf(\"10/16/17\") !== -1;",
+							"",
+							"tests['Boat is added to departure history'] =",
+							"String(res.departure_history).indexOf(String(pm.globals.get(\"New_Boat_ID\"))) !==",
+							"-1;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": "boat was undocked, slip updated"
+			},
+			"response": []
+		},
+		{
+			"name": "dock boat 1 {{b1_self}}/at_sea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"10/15/17\"\n}"
+				},
+				"url": {
+					"raw": "{{b1_self}}/at_sea",
+					"host": [
+						"{{b1_self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dock boat 2 {{b2_self}}/at_sea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"9/12/17\"\n}"
+				},
+				"url": {
+					"raw": "{{b2_self}}/at_sea",
+					"host": [
+						"{{b2_self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dock boat 3 {{b3_self}}/at_sea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"1/1/18\"\n}"
+				},
+				"url": {
+					"raw": "{{b3_self}}/at_sea",
+					"host": [
+						"{{b3_self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "attemp to dock when no slips open {{New_Boat_Self}}/at_sea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// no slips available shoud produce 403 response",
+							"tests['Attempt to dock when no slips open produced 403 error'] =",
+							"pm.response.code === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"10/18/17\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}/at_sea",
+					"host": [
+						"{{New_Boat_Self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "undock boat 1 {{b1_self}}/at_sea",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"departure_date\": \"2/5/2018\"\n}"
+				},
+				"url": {
+					"raw": "{{b1_self}}/at_sea",
+					"host": [
+						"{{b1_self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dock new boat at next available slip {{New_Boat_Self}}/at_sea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"2/14/18\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}/at_sea",
+					"host": [
+						"{{New_Boat_Self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": "dock new boat at next available slip"
+			},
+			"response": []
+		},
+		{
+			"name": "locate boat at slip {{Base_URL}}/slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"var found_boat = false;",
+							"var idx;",
+							"for (var i = 0; i < res.length; i++) {",
+							"    if (res[i].current_boat) {",
+							"        if (String(res[i].current_boat) === String(pm.globals.get(\"New_Boat_ID\"))) {",
+							"            found_boat = true;",
+							"            pm.globals.set(\"slip_with_new_boat\", res[i].self);",
+							"            idx = i;",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"tests['New Boat found at a slip'] =",
+							"found_boat === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}/slip",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Modify boat name {{New_Boat_Self}}",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Boat Name\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat modify success {{New_Boat_Self}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"tests['boat name was modified'] = ",
+							"String(res.name) === \"Updated Boat Name\";",
+							"",
+							"tests['type remains the same'] =",
+							"String(res.type) === \"New Boat Type\";",
+							"",
+							"tests['length remains the same'] =",
+							"String(res.length) === \"25\";",
+							"",
+							"tests['boat remains docked'] =",
+							"String(res.at_sea) === \"False\""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "request to replace boat without all fields fails {{New_Boat_Self}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// replace without all fields fails",
+							"tests['Replace boat without all fields fails'] =",
+							"pm.response.code === 400;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"new name\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Replace new boat {{New_Boat_Self}}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\" : \"Replaced Name\",\n  \"type\": \"Replaced Type\",\n  \"length\": 12\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Replace boat was successful {{New_Boat_Self}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"tests['boat name replaced'] =",
+							"String(res.name) === \"Replaced Name\";",
+							"",
+							"tests['boat type replaced'] =",
+							"String(res.type) === \"Replaced Type\";",
+							"",
+							"tests['boat length replaced'] =",
+							"String(res.length) === \"12\";",
+							"",
+							"tests['replaced boat is now at sea'] =",
+							"String(res.at_sea) === \"True\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "replaced boat is no longer at slip {{slip_with_new_boat}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"tests['replaced boat no longer at slip'] =",
+							"String(res.current_boat) === \"None\" &&",
+							"String(res.arrival_date) === \"None\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "redock new boat {{New_Boat_Self}}/at_sea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival_date\": \"1/1/18\"\n}"
+				},
+				"url": {
+					"raw": "{{New_Boat_Self}}/at_sea",
+					"host": [
+						"{{New_Boat_Self}}"
+					],
+					"path": [
+						"at_sea"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "locate boat again at slip {{Base_URL}}/slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"var found_boat = false;",
+							"var idx;",
+							"for (var i = 0; i < res.length; i++) {",
+							"    if (res[i].current_boat) {",
+							"        if (String(res[i].current_boat) === String(pm.globals.get(\"New_Boat_ID\"))) {",
+							"            found_boat = true;",
+							"            pm.globals.set(\"slip_with_new_boat\", res[i].self);",
+							"            idx = i;",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"tests['New Boat found at a slip'] =",
+							"found_boat === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}/slip",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "cannot have duplicate slip numbers {{slip_with_new_boat}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests['cannot change slip number to a number of another slip'] =",
+							"pm.response.code === 400;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"number\": 1\n}"
+				},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "modify slip containing our boat {{slip_with_new_boat}}",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"number\": 99\n}"
+				},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "confirm slip was modified {{slip_with_new_boat}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"tests['confirm slip was modified'] =",
+							"String(res.number) === \"99\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "replace slip without new number fails {{slip_with_new_boat}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests['attempt to replace slip without a new number fails'] =",
+							"pm.response.code === 400;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"current_boat\": \"boatid\"\n}"
+				},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "replace slip containing our boat {{slip_with_new_boat}}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"number\": 101\n}"
+				},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "confirm slip replacement is correct {{slip_with_new_boat}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"tests['replaced slip number correct'] =",
+							"String(res.number) === \"101\";",
+							"",
+							"tests['all other fields cleared'] =",
+							"String(res.current_boat) === \"None\" &&",
+							"String(res.arrival_date) === \"None\" &&",
+							"String(res.departure_history) === \"[]\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{slip_with_new_boat}}",
+					"host": [
+						"{{slip_with_new_boat}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "confirm boat at replaced slip is now at sea {{New_Boat_Self}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"",
+							"tests['boat occupying replaced slip is now at sea'] =",
+							"String(res.at_sea) === \"True\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete new boat {{New_Boat_Self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Boat_Self}}",
+					"host": [
+						"{{New_Boat_Self}}"
+					]
+				},
+				"description": "Delete new boat"
+			},
+			"response": []
+		},
+		{
+			"name": "confirm boat is deleted {{Base_URL}}boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var boats = JSON.parse(responseBody);",
+							"",
+							"var deleted_boat = false;",
+							"",
+							"for (var i = 0; i < boats.length; i++) {",
+							"    if (String(boats[i].id) === String(pm.globals.get(\"New_Boat_ID\"))) {",
+							"        b1 = true;",
+							"    }",
+							"}",
+							"",
+							"tests['Deleted boat is not listed'] =",
+							"deleted_boat === false;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}boat",
+					"host": [
+						"{{Base_URL}}boat"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete new slip {{New_Slip_Self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{New_Slip_Self}}",
+					"host": [
+						"{{New_Slip_Self}}"
+					]
+				},
+				"description": "delete new slip"
+			},
+			"response": []
+		},
+		{
+			"name": "confirm slip is deleted {{Base_URL}}slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var slips = JSON.parse(responseBody);",
+							"",
+							"var deleted_slip = false;",
+							"",
+							"for (var i = 0; i < slips.length; i++) {",
+							"    if (String(slips[i].id) === String(pm.globals.get(\"New_Slip_ID\"))) {",
+							"        b1 = true;",
+							"    }",
+							"}",
+							"",
+							"tests['Deleted slip is not listed'] =",
+							"deleted_slip === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Base_URL}}slip",
+					"host": [
+						"{{Base_URL}}slip"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete boat 1 {{b1_self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{b1_self}}",
+					"host": [
+						"{{b1_self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete boat 2 {{b2_self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{b2_self}}",
+					"host": [
+						"{{b2_self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete boat 3 {{b3_self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{b3_self}}",
+					"host": [
+						"{{b3_self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete slip 1 {{s1_self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{s1_self}}",
+					"host": [
+						"{{s1_self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete slip 2 {{s2_self}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{s2_self}}",
+					"host": [
+						"{{s2_self}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
