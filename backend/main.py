@@ -15,10 +15,21 @@ if not RUN_LOCAL:
     BASE_URL = "https://cs496final-186222.appspot.com/"
 
 # class for item 1
-class Item1(ndb.Model):
+class Person(ndb.Model):
     id = ndb.StringProperty()
-    attribute1 = ndb.StringProperty()
-    attribute2 = ndb.StringProperty()
+    fname = ndb.StringProperty()
+    lname = ndb.StringProperty()
+    age = ndb.IntegerPropery()
+    address = ndb.StringProperty()
+    pets = ndb.StringProperty(repeated=True)
+
+class Pet(ndb.Model):
+    id = ndb.StringProperty()
+    name = ndb.StringProperty()
+    species = ndb.StringProperty()
+    age = ndb.IntegerProperty()
+    weight = ndb.IntegerProperty()
+    owner = ndb.StringProperty()
 
 def create_new_Item1(self):
     Item1_data = json.loads(self.request.body)
