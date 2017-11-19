@@ -1,0 +1,1 @@
+python2 /opt/google-cloud-sdk/bin/dev_appserver.py app.yaml

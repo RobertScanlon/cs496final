@@ -276,6 +276,11 @@ def add_care_relation(self, id):
         self.response.write("the given id does not match any pet")
         return
 
+    if pet.caretaker:
+        self.response.status_int = 400
+        self.response.write("pet already has a caretaker")
+        return
+
     pet.caretaker = str(caretaker.id)
     pet.put()
 
