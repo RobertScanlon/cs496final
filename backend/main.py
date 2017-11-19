@@ -221,6 +221,15 @@ def delete_Person(self, id):
     if not person_to_delete:
         self.response.status_int = 404
         return
+
+    # remove care relation for all pets this person
+    # was cartaker for
+    pet_q = ndb.gql("SELECT * FROM Pet WHERE caretaker = '" + \
+                    id + "'")
+    for p in pet_q:
+        p.caretaker = None
+        p.put()
+
     person_to_delete.key.delete()
     self.response.status_int = 204
 
@@ -232,6 +241,14 @@ def delete_Pet(self, id):
     if not pet_to_delete:
         self.response.status_int = 404
         return
+
+    # remove the pet.id from any persons pet list
+    person_q = ndb.gql("SELECT * FROM Person WHERE pets == '" + \
+                       id + "'")
+    for p in person_q:
+        p.pets.remove(id)
+        p.put()
+
     pet_to_delete.key.delete()
     self.response.status_int = 204
 
@@ -271,7 +288,24 @@ def add_care_relation(self, id):
 # deletes care relationship bewteen person and pet
 ##############################################################################
 def remove_care_relation(self, id):
-    return
+    pet = ndb.Key(urlsafe=id).get()
+    if not pet:
+        self.response.status_int = 400
+        self.response.write("the given id does not match any pet")
+        return
+
+    person = ndb.Key(urlsafe=pet.caretaker).get()
+    if not person:
+        self.response.status_int = 400
+        self.response.write("the caretaker id for this pet does not " + \
+                            "identify a valid person")
+        return
+
+    # remove the pet.id from the persons pets list
+    person.pets.remove(pet.id)
+    pet.caretaker = None
+    person.put()
+    pet.put()
 
 
 ##############################################################################
