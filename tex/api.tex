@@ -5,206 +5,185 @@
 \noindent
 Robert Scanlon \\
 CS 496 Fall 2017 \\
-Marina API Assignment 
+Final Project
 
-\section*{Boat Objects}
-Boat objects are returned with the following properties. \\
+\section*{People Objects}
+People objects are returned with the following properties. \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Property}     & \textbf{Type}   & \textbf{Description} \\
 	\hline
 	id                    & String          & url safe identifier \\
 	\hline
-	self                  & Url String      & link to self (not an intrisic property of Boat objects; \\
+	self                  & Url String      & link to self (not an intrisic property of People objects; \\
 	                      &                 & added when request is made) \\
 	\hline
-	name		      & String          & user defined name \\
+	fname		      & String          & first name of person \\
 	\hline
-	type	              & String          & user defined boat type \\
+	lname	              & String          & last name of person \\
 	\hline
-	length                & Integer         & user defined boat length (feet) \\
+	age	              & Integer         & age of person (years) \\
 	\hline
-	at\_sea	              & Boolean         & True = Undocked; False = At a Slip, can only be changed \\
-	                      &                 & through docking / undocking / replace requests \\
+	address               & String          & home address of person \\
+	\hline
+	pets	              & String[]        & a list containing the ids of pets for which this \\
+	                      &                 & person is caretaker for \\
 	\hline
 \end{tabular}
 
-\section*{Slip Objects}
-Slip objects are returned with the following properties. \\
+\section*{Pet Objects}
+Pet objects are returned with the following properties. \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Property}     & \textbf{Type}   & \textbf{Description} \\
 	\hline
 	id                    & String          & url safe identifier \\
 	\hline
-	self                  & Url String      & link to self (not an intrisic property of Slip objects; \\
+	self                  & Url String      & link to self (not an intrisic property of Pet objects; \\
 	                      &                 & added when request is made) \\
 	\hline
-	number		      & Integer         & user defined number (name of Slip) \\
+	name		      & String          & name of pet \\
 	\hline
-	current\_boat         & String          & id of Boat occupying slip, can only be modified through \\
-	                      &                 & Boat docking / undocking requests and Slip replacements \\
+	species               & String          & species of pet (cat, dog, etc.) \\
 	\hline
-	arrival\_date         & String          & date of current boat arrival, can only be modified though \\
-	                      &                 & Boat docking / undocking requests and Slip replacements \\
+	age                   & Integer	        & age of pet (years) \\
 	\hline
-	departure\_history    & List            & List of previously docked boats (by Boat id) and their \\
-	                      &                 & departure dates, returned as a String \\
+	weight                & Integer         & weight of pet \\
+	\hline
+	caretaker             & String          & id of the person who is caretaker for this pet, \\
+	                      &                 & None if the pet does not curretly have a caretaker \\
 	\hline
 \end{tabular}
 
-\section*{Get all Boats and Slips}
+\section*{Get all People and Pets}
 \texttt{GET /} \\
-\textbf{Note:} Returns a json object containing "Boats" (a json list of all Boats in the
-database) and "Slips" (a json list of all Slips in the database).
+\textbf{Note:} Returns a json object containing "People" (a json list of all People in the
+database) and "Pets" (a json list of all Pets in the database).
 
-\section*{Get all Boats}
-\texttt{GET /boat} \\
-\textbf{Note:} Returns a json list of all Boats in the database.
+\section*{Get all People}
+\texttt{GET /person} \\
+\textbf{Note:} Returns a json list of all People in the database.
 
-\section*{Get a single Boat}
-\texttt{GET /boat/:id} \\
+\section*{Get a single Person}
+\texttt{GET /person/:id} \\
 \textbf{Note:} A request containing a valid id string which does not
-identidy a Boat in the database will return a 404 status code. A request
+identidy a Person in the database will return a 404 status code. A request
 containing an invaid id string will return a status code 500 server error.
 
-\section*{Get all Slips}
-\texttt{GET /slip} \\
-\textbf{Note:} Returns a json list of all Slips in the database.
+\section*{Get all Pets}
+\texttt{GET /pet} \\
+\textbf{Note:} Returns a json list of all Pets in the database.
 
-\section*{Get single Slip}
-\texttt{GET /slip/:id} \\
+\section*{Get single Pet}
+\texttt{GET /pet/:id} \\
 \textbf{Note:} A request containing a valid id string which does not
-identidy a Slip in the database will return a 404 status code. A request
+identidy a Pet in the database will return a 404 status code. A request
 containing an invaid id string will return a status code 500 server error.
 
-\section*{Create a new Boat}
-\texttt{POST /boat} \\
+\section*{Create a new Person}
+\texttt{POST /person} \\
 \textbf{Input} : application/json \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
-	name          & string        & \textbf{Required.} Name of Boat \\
+	fname         & string        & \textbf{Required.} First name of Person \\
 	\hline
-	type          & string        & \textbf{Required.} Type of Boat \\
+	lname         & string        & \textbf{Required.} Last name of Person \\
 	\hline
-	length        & integer       & \textbf{Required.} Length of Boat in feet \\
+	age           & integer       & \textbf{Required.} Age of Person (years) \\
+	\hline
+	address       & integer       & \textbf{Required.} Address of Person \\
 	\hline
 \end{tabular} \\
 \textbf{Note:} A request which contains invalid body data will return a
 status code 400 Bad Request.
 
-\section*{Create a new Slip}
-\texttt{POST /slip} \\
+\section*{Create a new Pet}
+\texttt{POST /pet} \\
 \textbf{Input} : application/json \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
-	number        & integer        & \textbf{Required.} Number (name) of Slip \\
+	name          & String        & \textbf{Required.} Name of pet \\
+	\hline
+	species       & String        & \textbf{Required.} Species of Pet \\
+	\hline
+	age           & integer       & \textbf{Required.} Age of Pet (years) \\
+	\hline
+	weight        & integer       & \textbf{Required.} Weight of Pet (lbs) \\
 	\hline
 \end{tabular} \\
 \textbf{Note:} A request which contains invalid body data will return a
 status code 400 Bad Request.
 
-\section*{Modify a Boat}
-\texttt{PATCH /boat/:id} \\
+\section*{Modify a Person}
+\texttt{PATCH /person/:id} \\
 \textbf{Input} : application/json \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
-	name          & string        & New name of Boat \\
+	age           & integer       & New age of Person (years) \\
 	\hline
-	type          & string        & New type of Boat \\
-	\hline
-	length        & integer       & New length of Boat in feet \\
+	address       & string        & New address of Person \\
 	\hline
 \end{tabular}
 \\
-Note: The \texttt{at\_sea} and \texttt{id} Boat attributes cannot be modified through this request.
+Note: The \texttt{id}, \texttt{fname}, \texttt{lname}, and \texttt{pets}
+Person attributes cannot be modified through this request.
 
-\section*{Modify a Slip}
-\texttt{PATCH /slip/:id} \\
+\section*{Modify a Pet}
+\texttt{PATCH /pet/:id} \\
 \textbf{Input} : application/json \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
-	number        & integer        & New number (name) of Slip \\
+	age           & integer        & New age of Pet (years) \\
+	\hline
+	weight        & integer        & New weight of Pet (lbs) \\
 	\hline
 \end{tabular}
 \\
-Note: The \texttt{current\_boat}, \texttt{arrival\_date}, and \texttt{departure\_history} 
-Slip attributes cannot be modified though this request.
+Note: The \texttt{id}, \texttt{name}, \texttt{species} and \texttt{caretaker} 
+Pet attributes cannot be modified though this request.
 
-\section*{Replace a Boat}
-\texttt{PUT /boat/:id} \\
+\section*{Delete a Person}
+\texttt{DELETE /person/:id} \\
+Note: The caretaker attribute of all Pets for which this Person was caretaker for
+is set to \texttt{None} upon the deletion of this Person.
+
+\section*{Delete a Pet}
+\texttt{DELETE /pet/:id} \\
+Note: This Pet's id string is removed from a Person's pets[] attribute upon
+deletion of this Pet, if said person was caretaker for this Pet.
+
+\section*{Add Care Relationship}
+\texttt{PUT /pet/:id/caretaker} \\
 \textbf{Input} : application/json \\
 \begin{tabular}{| l | l | l |}
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
-	name          & string        & \textbf{Required.} New name of Boat \\
-	\hline
-	type          & string        & \textbf{Required.} New type of Boat \\
-	\hline
-	length        & integer       & \textbf{Required.} New length of Boat in feet \\
-	\hline
-\end{tabular}
-\\
-Note: If a boat occupying a slip is replaced, it is removed from the slip (without updating
-the slip's \texttt{departure\_history}) and set \texttt{at\_sea}.
-
-\section*{Replace a Slip}
-\texttt{PUT /slip/:id} \\
-\textbf{Input} : application/json \\
-\begin{tabular}{| l | l | l |}
-	\hline
-	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
-	\hline
-	number        & integer        & \textbf{Required.} New number (name) of Slip \\
-	\hline
-\end{tabular}
-\\
-Note: If a slip housing a Boat is replaced, the boat is set \texttt{at\_sea}. Replacing a slip
-resets the slip's \texttt{current\_boat}, \texttt{arrival\_date}, and \texttt{departure\_history} 
-properties.
-
-\section*{Delete a Boat}
-\texttt{DELETE /boat/:id} \\
-Note: If a boat was occupying a slip when it was deleted, the \texttt{current\_boat} and
-\texttt{arrival\_date} are reset. The slip's \texttt{departure\_history} is not updated.
-
-\section*{Delete a Slip}
-\texttt{DELETE /slip/:id} \\
-Note: If a slip was housing a boat when it was deleted, the Boat is set \texttt{at\_sea}.
-
-\section*{Dock a Boat}
-\texttt{PUT /boat/:id/at\_sea} \\
-\begin{tabular}{| l | l | l |}
-	\hline
-	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
-	\hline
-	arrival\_date & string        & \textbf{Required.} Date Boat is docked \\
+	person\_id   & string         & \textbf{Required.} Person id string of the Person \\
+		     &                & who will be caretaker for this Pet. \\
 	\hline
 \end{tabular} \\
-Note: Boats requesting to be docked are assigned to the next available slip. If no slips
-are available a 403 error is returned.
+Note: If the Pet identified by the \texttt{id} in the url already has a caretaker,
+the \texttt{id} in the url does not match a Pet in the databse, or the \texttt{id}
+passed in the request body does not match a person in the databse, a \texttt{400} error code
+is returned along with an appropriate error message. If the request is successful the Pet's
+\texttt{caretaker} is updated, along with the Person's \texttt{pets} list.
 
-\section*{Undock a Boat}
-\texttt{PATCH /boat/:id/at\_sea} \\
-\begin{tabular}{| l | l | l |}
-	\hline
-	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
-	\hline
-	departure\_date & string        & \textbf{Required.} Date Boat is undocked \\
-	\hline
-\end{tabular}
+\section*{Remove Care Relationship}
+\texttt{PATCH /pet/:id/caretaker} \\
+Note: If the \texttt{id} passed in the url does not identify a Pet in the databse,
+or the person \texttt{id} of this Pets \texttt{caretaker} does not identify a Person
+in the databse, a \texttt{400} error is returned with the appropriate message.
+If the request is successful, the Pet's \texttt{caretaker} attribute is set to
+\texttt{None} and the Pet's \texttt{id} string is removed from the Person's
+\texttt{pets} list.
 
-\section*{Get current Boat in Slip}
-\texttt{GET /slip/:id/current} \\
-\textbf{Note:} If the slip does not currently house a boat, the string
-"No boat currently at slip" is returned.
 \end{document}
