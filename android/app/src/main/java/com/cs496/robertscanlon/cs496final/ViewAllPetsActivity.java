@@ -3,8 +3,17 @@ package com.cs496.robertscanlon.cs496final;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -37,7 +46,50 @@ public class ViewAllPetsActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String r = response.body().string();
-                Log.d("ViewAllPets response body string", r);
+
+                try {
+                    JSONArray items = new JSONArray(r);
+                    List<Map<String,String>> pets;
+                    pets = new ArrayList<Map<String,String>>();
+
+                    for (int i = 0; i < items.length(); i++) {
+                        HashMap<String,String> p;
+                        p = new HashMap<String,String>();
+                        p.put("name", "Name: " +
+                                items.getJSONObject(i).getString("name"));
+                        p.put("species", "Species: " +
+                                items.getJSONObject(i).getString("species"));
+                        p.put("age", "Age: " +
+                                items.getJSONObject(i).getString("age"));
+                        p.put("weight", "Weight: " +
+                                items.getJSONObject(i).getString("weight"));
+                        pets.add(p);
+                    }
+
+                    final SimpleAdapter petsAdapter;
+                    petsAdapter = new SimpleAdapter(
+                            ViewAllPetsActivity.this,
+                            pets,
+                            R.layout.all_pets_layout,
+                            new String[]{"name","species","age","weight"},
+                            new int[]{R.id.allPetName,
+                                    R.id.allPetSpecies,
+                                    R.id.allPetAge,
+                                    R.id.allPetWeight}
+                    );
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ListView allPetsListView;
+                            allPetsListView = (ListView)
+                                    findViewById(R.id.petsListView);
+                            allPetsListView.setAdapter(petsAdapter);
+                        }
+                    });
+                } catch (JSONException je) {
+                    je.printStackTrace();
+                }
             }
         });
     }
