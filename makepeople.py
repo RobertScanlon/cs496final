@@ -1,8 +1,7 @@
 import requests
 import json
 
-new_pet_url = "http://localhost:8080/pet"
-new_person_url = "http://localhost:8080/person"
+new_person_url = "https://cs496final-186222.appspot.com/person"
 
 class people:
     def __init__(self, fn, ln, age, addr):
