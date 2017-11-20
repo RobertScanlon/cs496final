@@ -34,5 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(allPetsIntent);
             }
         });
+
+        // Create a new Person
+        Button newPersonButton = (Button) findViewById(R.id.addPersonButton);
+        newPersonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newPersonIntent = new Intent(MainActivity.this, CreatePersonActivity.class);
+                startActivity(newPersonIntent);
+            }
+        });
     }
 }

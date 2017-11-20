@@ -4,4 +4,8 @@
     <string name="allPetsButtonText">View All Pets</string>
     <string name="newPersonButtonText">Create a New Person</string>
     <string name="newPetButtonText">Create a New Pet</string>
+    <string name="newPersonfnameHint">First Name</string>
+    <string name="newPersonlnameHint">Last Name</string>
+    <string name="newPersonageHint">Age</string>
+    <string name="newPersonaddressHint">Address</string>
 </resources>
