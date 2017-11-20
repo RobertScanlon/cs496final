@@ -19,10 +19,10 @@ public class CreatePersonActivity extends AppCompatActivity {
         newPersonButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fname = ((TextView)findViewById(R.id.newPersonfnameText)).toString();
-                String lname = ((TextView)findViewById(R.id.newPersonfnameText)).toString();
-                int age = Integer.parseInt(((TextView)findViewById(R.id.newPersonfnameText)).toString());
-                String address = ((TextView)findViewById(R.id.newPersonfnameText)).toString();
+                String fname = ((TextView)findViewById(R.id.newPersonfnameText)).getText().toString();
+                String lname = ((TextView)findViewById(R.id.newPersonlnameText)).getText().toString();
+                int age = Integer.parseInt(((TextView)findViewById(R.id.newPersonageText)).getText().toString());
+                String address = ((TextView)findViewById(R.id.newPersonaddressText)).getText().toString();
 
                 Log.d("First Name: ", fname);
                 Log.d("Last Name: " , lname);
