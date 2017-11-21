@@ -8,7 +8,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String BASE_URL = "http://localhost:8080/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
