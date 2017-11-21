@@ -314,6 +314,27 @@ def remove_care_relation(self, id):
 
 
 ##############################################################################
+# Returns all pets with no caretaker
+##############################################################################
+def get_free_pets(self):
+    free_pets = []
+    pets_q = ndb.gql("SELECT * FROM Pet WHERE caretaker = NULL")
+    for p in pets_q:
+        odict = collections.OrderedDict()
+        odict['id']         = str(p.id)
+        odict['name']       = str(p.name)
+        odict['species']    = str(p.species)
+        odict['age']        = str(p.age)
+        odict['weight']     = str(p.weight)
+        odict['caretaker']  = str(p.caretaker)
+        odict['self']       = str(BASE_URL) + \
+                              str("pet/") + \
+                              str(p.id)
+        free_pets.append(odict)
+    self.response.write(json.dumps(free_pets))
+        
+
+##############################################################################
 # Handlers
 #############################################################################
 class MainPage(webapp2.RequestHandler):
@@ -372,6 +393,10 @@ class CaretakerHandler(webapp2.RequestHandler):
             return
         remove_care_relation(self, id)
 
+class FreePetsHandler(webapp2.RequestHandler):
+    def get(self):
+        get_free_pets(self)
+
 # allow PATCH
 allowed_methods = webapp2.WSGIApplication.allowed_methods
 new_allowed_methods = allowed_methods.union(('PATCH',))
@@ -382,6 +407,7 @@ app = webapp2.WSGIApplication([
     ('/person', PersonHandler),
     ('/person/([\w-]+)', PersonHandler),
     ('/pet', PetHandler),
+    ('/pet/free', FreePetsHandler),
     ('/pet/([\w-]+)', PetHandler),
     ('/pet/([\w-]+)/caretaker', CaretakerHandler),
 ], debug=True)
