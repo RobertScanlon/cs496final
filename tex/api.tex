@@ -51,7 +51,7 @@ Pet objects are returned with the following properties. \\
 	weight                & Integer         & weight of pet \\
 	\hline
 	caretaker             & String          & id of the person who is caretaker for this pet, \\
-	                      &                 & None if the pet does not curretly have a caretaker \\
+	                      &                 & NULL if the pet does not curretly have a caretaker \\
 	\hline
 \end{tabular}
 
@@ -153,12 +153,17 @@ Pet attributes cannot be modified though this request.
 \section*{Delete a Person}
 \texttt{DELETE /person/:id} \\
 Note: The caretaker attribute of all Pets for which this Person was caretaker for
-is set to \texttt{None} upon the deletion of this Person.
+is set to \texttt{NULL} upon the deletion of this Person.
 
 \section*{Delete a Pet}
 \texttt{DELETE /pet/:id} \\
 Note: This Pet's id string is removed from a Person's pets[] attribute upon
 deletion of this Pet, if said person was caretaker for this Pet.
+
+\section*{Get All Pets With No Caretaker}
+\texttt{GET /pet/free} \\
+Note: This request will return a JSON array of all Pets in the database whose
+\texttt{caretaker} attribute is \texttt{NULL}.
 
 \section*{Add Care Relationship}
 \texttt{PUT /pet/:id/caretaker} \\
@@ -183,7 +188,7 @@ Note: If the \texttt{id} passed in the url does not identify a Pet in the databs
 or the person \texttt{id} of this Pets \texttt{caretaker} does not identify a Person
 in the databse, a \texttt{400} error is returned with the appropriate message.
 If the request is successful, the Pet's \texttt{caretaker} attribute is set to
-\texttt{None} and the Pet's \texttt{id} string is removed from the Person's
+\texttt{NULL} and the Pet's \texttt{id} string is removed from the Person's
 \texttt{pets} list.
 
 \end{document}
