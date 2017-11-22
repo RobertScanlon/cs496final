@@ -2,9 +2,9 @@ import requests
 import json
 import sys
 if sys.argv[len(sys.argv) - 1] == "local":
-    new_person_url = "http://localhost:8080/person"
+    new_pet_url = "http://localhost:8080/pet"
 else:
-    new_person_url = "https://cs496final-186222.appspot.com/person"
+    new_pet_url = "https://cs496final-186222.appspot.com/pet"
 
 class pet:
     def __init__(self, n, s, a, w):

@@ -8,7 +8,7 @@ from google.appengine.ext import ndb
 import json
 import collections
 
-RUN_LOCAL = True
+RUN_LOCAL = False 
 
 BASE_URL = "http://localhost:8080/"
 if not RUN_LOCAL:
