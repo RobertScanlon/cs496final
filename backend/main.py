@@ -332,7 +332,34 @@ def get_free_pets(self):
                               str(p.id)
         free_pets.append(odict)
     self.response.write(json.dumps(free_pets))
-        
+
+
+##############################################################################
+# Returns a list of pets a person is caretaker for
+##############################################################################
+def get_persons_pets(self, id):
+    pets = []
+    person = ndb.Key(urlsafe=id).get()
+    if not person:
+        self.response.status_int = 404
+        self.response.write("No such person with ID id")
+
+    pets_q = ndb.gql("SELECT * FROM Pet WHERE caretaker = '" + \
+                     person.id + "'")
+    for p in pets_q:
+        odict = collections.OrderedDict()
+        odict['id']         = str(p.id)
+        odict['name']       = str(p.name)
+        odict['species']    = str(p.species)
+        odict['age']        = str(p.age)
+        odict['weight']     = str(p.weight)
+        odict['caretaker']  = str(p.caretaker)
+        odict['self']       = str(BASE_URL) + \
+                              str("pet/") + \
+                              str(p.id)
+        pets.append(odict)
+    self.response.write(json.dumps(pets))
+
 
 ##############################################################################
 # Handlers
@@ -397,6 +424,12 @@ class FreePetsHandler(webapp2.RequestHandler):
     def get(self):
         get_free_pets(self)
 
+class PersonPetsHandler(webapp2.RequestHandler):
+    def get(self, id):
+        if not id:
+            return
+        get_persons_pets(self, id)
+
 # allow PATCH
 allowed_methods = webapp2.WSGIApplication.allowed_methods
 new_allowed_methods = allowed_methods.union(('PATCH',))
@@ -406,6 +439,7 @@ app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/person', PersonHandler),
     ('/person/([\w-]+)', PersonHandler),
+    ('/person/([\w-]+)/pets', PersonPetsHandler),
     ('/pet', PetHandler),
     ('/pet/free', FreePetsHandler),
     ('/pet/([\w-]+)', PetHandler),
