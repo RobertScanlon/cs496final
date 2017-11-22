@@ -43,5 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newPersonIntent);
             }
         });
+
+        // Create a new Pet
+        Button newPetButton = (Button) findViewById(R.id.addPetButton);
+        newPetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newPetIntent = new Intent(MainActivity.this, CreatePetActivity.class);
+                startActivity(newPetIntent);
+            }
+        });
     }
 }

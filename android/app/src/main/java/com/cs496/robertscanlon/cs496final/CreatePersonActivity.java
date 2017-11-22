@@ -42,78 +42,62 @@ public class CreatePersonActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final MediaType JSON = MediaType.parse("application/json");
-                OkHttpClient mOkHttpClient = new OkHttpClient();
-                Request request;
+            final MediaType JSON = MediaType.parse("application/json");
+            OkHttpClient mOkHttpClient = new OkHttpClient();
+            Request request;
 
-                String fname = ((TextView)findViewById(R.id.newPersonfnameText)).getText().toString();
-                String lname = ((TextView)findViewById(R.id.newPersonlnameText)).getText().toString();
-                int age = Integer.parseInt(((TextView)findViewById(R.id.newPersonageText)).getText().toString());
-                String address = ((TextView)findViewById(R.id.newPersonaddressText)).getText().toString();
+            String fname = ((TextView)findViewById(R.id.newPersonfnameText)).getText().toString();
+            String lname = ((TextView)findViewById(R.id.newPersonlnameText)).getText().toString();
+            int age = Integer.parseInt(((TextView)findViewById(R.id.newPersonageText)).getText().toString());
+            String address = ((TextView)findViewById(R.id.newPersonaddressText)).getText().toString();
 
-                Log.d("First Name: ", fname);
-                Log.d("Last Name: " , lname);
-                Log.d("Age: ", String.valueOf(age));
-                Log.d("Address: ", address);
+            Log.d("First Name: ", fname);
+            Log.d("Last Name: " , lname);
+            Log.d("Age: ", String.valueOf(age));
+            Log.d("Address: ", address);
 
-                // create json string to send in post request
-                String body = "{\"fname\": \"" + fname + "\", \"lname\": \"" + lname + "\", " +
-                        "\"age\": " + age + ", \"address\": \"" + address + "\"}";
-                Log.d("body string: ", body);
+            // create json string to send in post request
+            String body = "{\"fname\": \"" + fname + "\", \"lname\": \"" + lname + "\", " +
+                    "\"age\": " + age + ", \"address\": \"" + address + "\"}";
+            Log.d("body string: ", body);
 
-                request = new Request.Builder()
-                        .url(BASE_URL)
-                        .post(RequestBody.create(JSON, body))
-                        .build();
+            request = new Request.Builder()
+                    .url(BASE_URL)
+                    .post(RequestBody.create(JSON, body))
+                    .build();
 
-                mOkHttpClient = new OkHttpClient();
-                mOkHttpClient.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        e.printStackTrace();
+            mOkHttpClient = new OkHttpClient();
+            mOkHttpClient.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                                                              e.printStackTrace();
+                                                                                  }
+
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    String r = response.body().string();
+
+                    try {
+                        JSONObject item = new JSONObject(r);
+                        final String newfname = item.getString("fname");
+                        final String newlname = item.getString("lname");
+                        final String newage = item.getString("age");
+                        final String newaddress = item.getString("address");
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ((TextView)findViewById(R.id.newPersonFname)).setText(newfname);
+                                ((TextView)findViewById(R.id.newPersonLname)).setText(newlname);
+                                ((TextView)findViewById(R.id.newPersonAge)).setText(newage);
+                                ((TextView)findViewById(R.id.newPersonAddress)).setText(newaddress);
+                            }
+                        });
+                    } catch (JSONException je) {
+                        je.printStackTrace();
                     }
-
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        String r = response.body().string();
-
-                        try {
-                            JSONObject item = new JSONObject(r);
-                            HashMap<String,String> person;
-                            person = new HashMap<String,String>();
-                            List<Map<String,String>> people;
-                            people = new ArrayList<Map<String,String>>();
-                            person.put("fname", "First Name: " + item.getString("fname"));
-                            person.put("lname", "Last Name: " + item.getString("lname"));
-                            person.put("age", "Age: " + item.getString("age"));
-                            person.put("address", "Address: " + item.getString("address"));
-
-                            final SimpleAdapter peopleAdapter;
-                            peopleAdapter = new SimpleAdapter(
-                                    CreatePersonActivity.this,
-                                    people,
-                                    R.layout.new_person_layout,
-                                    new String[]{"fname","lname","age","address"},
-                                    new int[]{R.id.newPersonFname,
-                                            R.id.newPersonLname,
-                                            R.id.newPersonAge,
-                                            R.id.newPersonAddress}
-                            );
-
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    ListView allPeopleListView;
-                                    allPeopleListView = (ListView)
-                                            findViewById(R.id.newPersonListView);
-                                    allPeopleListView.setAdapter(peopleAdapter);
-                                }
-                            });
-                        } catch (JSONException je) {
-                            je.printStackTrace();
-                        }
-                    }
-                });
+                }
+            });
             }
         });
     }

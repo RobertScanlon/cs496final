@@ -45,12 +45,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/newPersonButtonText" />
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/newPersonListView">
 
-
-    </ListView>
+    <TextView
+        android:id="@+id/newPersonFname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/newPersonLname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/newPersonAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/newPersonAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

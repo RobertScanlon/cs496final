@@ -8,4 +8,9 @@
     <string name="newPersonlnameHint">Last Name</string>
     <string name="newPersonageHint">Age</string>
     <string name="newPersonaddressHint">Address</string>
+    <string name="newPetnameHint">Name</string>
+    <string name="newPetageHint">Age</string>
+    <string name="newPetspeciesHint">Species</string>
+    <string name="newPetweightHint">Weight</string>
+
 </resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context="com.cs496.robertscanlon.cs496final.CreatePetActivity">
+
+<EditText
+    android:id="@+id/newPetNameText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="text"
+    android:hint="@string/newPetnameHint"/>
+
+<EditText
+    android:id="@+id/newPetSpeciesText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="text"
+    android:hint="@string/newPetspeciesHint" />
+
+<EditText
+    android:id="@+id/newPetAgeText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="number"
+    android:hint="@string/newPetageHint" />
+
+<EditText
+    android:id="@+id/newPetWeightText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="number"
+    android:hint="@string/newPetweightHint" />
+
+<Button
+    android:id="@+id/newPetButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/newPetButtonText" />
+
+<TextView
+    android:id="@+id/newPetName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/newPetSpecies"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/newPetAge"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/newPetWeight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ViewAllPeopleActivity" />
         <activity android:name=".ViewAllPetsActivity" />
-        <activity android:name=".CreatePersonActivity"></activity>
+        <activity android:name=".CreatePersonActivity" />
+        <activity android:name=".CreatePetActivity"></activity>
     </application>
 
 </manifest>
