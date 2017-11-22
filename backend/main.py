@@ -243,7 +243,7 @@ def delete_Pet(self, id):
         return
 
     # remove the pet.id from any persons pet list
-    person_q = ndb.gql("SELECT * FROM Person WHERE pets == '" + \
+    person_q = ndb.gql("SELECT * FROM Person WHERE pets = '" + \
                        id + "'")
     for p in person_q:
         p.pets.remove(id)
@@ -384,7 +384,7 @@ class PersonHandler(webapp2.RequestHandler):
             return
         modify_Person(self, id)
 
-    def delete(self, id):
+    def delete(self, id=None):
         if not id:
             return
         delete_Person(self, id)
@@ -404,18 +404,18 @@ class PetHandler(webapp2.RequestHandler):
             return
         modify_Pet(self, id)
 
-    def delete(self, id):
+    def delete(self, id=None):
         if not id:
             return
         delete_Pet(self, id)
 
 class CaretakerHandler(webapp2.RequestHandler):
-    def put(self, id):
+    def put(self, id=None):
         if not id:
             return
         add_care_relation(self, id)
 
-    def patch(self, id):
+    def patch(self, id=None):
         if not id:
             return
         remove_care_relation(self, id)
@@ -425,7 +425,7 @@ class FreePetsHandler(webapp2.RequestHandler):
         get_free_pets(self)
 
 class PersonPetsHandler(webapp2.RequestHandler):
-    def get(self, id):
+    def get(self, id=None):
         if not id:
             return
         get_persons_pets(self, id)
