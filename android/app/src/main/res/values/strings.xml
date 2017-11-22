@@ -12,5 +12,9 @@
     <string name="newPetageHint">Age</string>
     <string name="newPetspeciesHint">Species</string>
     <string name="newPetweightHint">Weight</string>
+    <string name="deletePersonButtonText">Delete Person</string>
+    <string name="editPersonButtonText">Edit Person</string>
+    <string name="deletePetButtonText">Delete Pet</string>
+    <string name="editPetButtonText">Edit Pet</string>
 
 </resources>
