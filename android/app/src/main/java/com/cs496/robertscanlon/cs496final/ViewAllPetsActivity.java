@@ -1,8 +1,11 @@
 package com.cs496.robertscanlon.cs496final;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -53,8 +56,8 @@ public class ViewAllPetsActivity extends AppCompatActivity {
 
                 try {
                     JSONArray items = new JSONArray(r);
-                    List<Map<String,String>> pets;
-                    pets = new ArrayList<Map<String,String>>();
+                    ArrayList<HashMap<String,String>> pets;
+                    pets = new ArrayList<HashMap<String,String>>();
 
                     for (int i = 0; i < items.length(); i++) {
                         HashMap<String,String> p;
@@ -67,11 +70,13 @@ public class ViewAllPetsActivity extends AppCompatActivity {
                                 items.getJSONObject(i).getString("age"));
                         p.put("weight", "Weight: " +
                                 items.getJSONObject(i).getString("weight"));
+                        p.put("pet_selfUrl",
+                                items.getJSONObject(i).getString("self"));
                         pets.add(p);
                     }
 
-                    final SimpleAdapter petsAdapter;
-                    petsAdapter = new SimpleAdapter(
+                    final PetAdapter petsAdapter;
+                    petsAdapter = new PetAdapter(
                             ViewAllPetsActivity.this,
                             pets,
                             R.layout.all_pets_layout,
@@ -98,3 +103,4 @@ public class ViewAllPetsActivity extends AppCompatActivity {
         });
     }
 }
+

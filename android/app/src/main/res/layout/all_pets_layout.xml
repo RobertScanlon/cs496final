@@ -29,11 +29,13 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/deletePetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/deletePetButtonText" />
 
         <Button
+            android:id="@+id/editPetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/editPetButtonText"/>

@@ -16,5 +16,7 @@
     <string name="editPersonButtonText">Edit Person</string>
     <string name="deletePetButtonText">Delete Pet</string>
     <string name="editPetButtonText">Edit Pet</string>
+    <string name="confirmDeletePersonButtonText">Confirm Delete</string>
+    <string name="confirmDeletePetButtonText">Confirm Delete</string>
 
 </resources>

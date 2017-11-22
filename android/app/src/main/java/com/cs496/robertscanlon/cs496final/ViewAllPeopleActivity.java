@@ -1,10 +1,18 @@
 package com.cs496.robertscanlon.cs496final;
 
+import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,7 +33,6 @@ import okhttp3.Response;
 public class ViewAllPeopleActivity extends AppCompatActivity {
 
     final String BASE_URL = "https://cs496final-186222.appspot.com/";
-    OkHttpClient httpClient = new OkHttpClient();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +61,8 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
 
                 try {
                     JSONArray items = new JSONArray(r);
-                    List<Map<String,String>> people;
-                    people = new ArrayList<Map<String,String>>();
+                    ArrayList<HashMap<String,String>> people;
+                    people = new ArrayList<HashMap<String,String>>();
 
                     for (int i = 0; i < items.length(); i++) {
                         HashMap<String,String> p;
@@ -68,11 +75,13 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
                                 items.getJSONObject(i).getString("age"));
                         p.put("address", "Address: " +
                                 items.getJSONObject(i).getString("address"));
+                        p.put("person_selfUrl",
+                                items.getJSONObject(i).getString("self"));
                         people.add(p);
                     }
 
-                    final SimpleAdapter peopleAdapter;
-                    peopleAdapter = new SimpleAdapter(
+                    final PersonAdapter peopleAdapter;
+                    peopleAdapter = new PersonAdapter(
                             ViewAllPeopleActivity.this,
                             people,
                             R.layout.all_people_layout,
@@ -99,3 +108,4 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
         });
     }
 }
+
