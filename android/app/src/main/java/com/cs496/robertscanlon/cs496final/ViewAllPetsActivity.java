@@ -30,6 +30,10 @@ public class ViewAllPetsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all_pets);
+        showAllPets();
+    }
+
+    private void showAllPets() {
 
         Request req = new Request.Builder()
                 .url(BASE_URL + "pet")

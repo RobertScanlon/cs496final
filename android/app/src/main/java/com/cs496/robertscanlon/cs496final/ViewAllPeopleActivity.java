@@ -31,6 +31,10 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all_people);
+        showAllPeople();
+    }
+
+    private void showAllPeople() {
 
         Request req = new Request.Builder()
                 .url(BASE_URL + "person")
@@ -74,9 +78,9 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
                             R.layout.all_people_layout,
                             new String[]{"fname","lname","age","address"},
                             new int[]{R.id.allPeopleFname,
-                            R.id.allPeopleLname,
-                            R.id.allPeopleAge,
-                            R.id.allPeopleAddress}
+                                    R.id.allPeopleLname,
+                                    R.id.allPeopleAge,
+                                    R.id.allPeopleAddress}
                     );
 
                     runOnUiThread(new Runnable() {
