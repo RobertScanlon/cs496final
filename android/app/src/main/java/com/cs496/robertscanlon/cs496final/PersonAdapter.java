@@ -50,6 +50,21 @@ public class PersonAdapter extends SimpleAdapter {
             }
         });
 
+        Button editButton;
+        editButton = (Button) v.findViewById(R.id.editPersonButton);
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, EditPersonActivity.class);
+                intent.putExtra("fname", dataList.get(possition).get("fname"));
+                intent.putExtra("lname", dataList.get(possition).get("lname"));
+                intent.putExtra("age", dataList.get(possition).get("age"));
+                intent.putExtra("address", dataList.get(possition).get("address"));
+                intent.putExtra("url", dataList.get(possition).get("person_selfUrl"));
+                mContext.startActivity(intent);
+            }
+        });
+
         return v;
     }
 }

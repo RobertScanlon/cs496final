@@ -23,4 +23,9 @@
     <string name="submitPetEditButtonText">Submit Edit</string>
     <string name="editPetAgeHint">Age</string>
     <string name="editPetWeightHint">Weight</string>
+    <string name="newPersonAgeText">New Age</string>
+    <string name="newAddressText">New Weight</string>
+    <string name="submitPersonEditButtonText">Submit Edit</string>
+    <string name="editPersonAgeHint">Age</string>
+    <string name="editPersonAddressHint">Weight</string>
 </resources>

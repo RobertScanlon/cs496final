@@ -2,6 +2,8 @@ package com.cs496.robertscanlon.cs496final;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -26,15 +28,15 @@ public class EditPetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_pet);
 
         // set the pet attributes
-        TextView oldName = (TextView)findViewById(R.id.editPetName);
-        TextView oldSpecies = (TextView)findViewById(R.id.editPetSpecies);
-        TextView oldAge = (TextView)findViewById(R.id.editPetAge);
-        TextView oldWeight = (TextView)findViewById(R.id.editPetWeight);
+        final TextView oldName = (TextView)findViewById(R.id.editPetName);
+        final TextView oldSpecies = (TextView)findViewById(R.id.editPetSpecies);
+        final TextView oldAge = (TextView)findViewById(R.id.editPetAge);
+        final TextView oldWeight = (TextView)findViewById(R.id.editPetWeight);
 
-        String oldNameText = getIntent().getStringExtra("name");
-        String oldSpeciesText = getIntent().getStringExtra("species");
-        String oldAgeText = getIntent().getStringExtra("age");
-        String oldWeightText = getIntent().getStringExtra("weight");
+        final String oldNameText = getIntent().getStringExtra("name");
+        final String oldSpeciesText = getIntent().getStringExtra("species");
+        final String oldAgeText = getIntent().getStringExtra("age");
+        final String oldWeightText = getIntent().getStringExtra("weight");
 
         oldName.setText(oldNameText);
         oldSpecies.setText(oldSpeciesText);
@@ -42,26 +44,33 @@ public class EditPetActivity extends AppCompatActivity {
         oldWeight.setText(oldWeightText);
 
         // set hints
-        EditText newAgeTextEdit = (EditText)findViewById(R.id.newAgeEditText);
-        EditText newWeightEditText = (EditText)findViewById(R.id.newWeightEditText);
+        final EditText newAgeTextEdit = (EditText)findViewById(R.id.newAgeEditText);
+        final EditText newWeightEditText = (EditText)findViewById(R.id.newWeightEditText);
 
         newAgeTextEdit.setHint(oldAgeText);
         newWeightEditText.setHint(oldWeightText);
 
-        // new values
-        String newAge = newAgeTextEdit.getText().toString();
-        if (newAge == "") {
-            newAge = oldAgeText;
-        }
-        String newWeight = newWeightEditText.getText().toString();
-        if (newWeight == "") {
-            newWeight = oldWeightText;
-        }
-        int newAgeInt = Integer.parseInt(newAge);
-        int newWeightInt = Integer.parseInt(newWeight);
+        Button editPetButton = (Button)findViewById(R.id.submitPetEditButton);
+        editPetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // new values
+                String newAge = newAgeTextEdit.getText().toString();
+                if (newAge == "") {
+                    newAge = oldAgeText;
+                }
+                String newWeight = newWeightEditText.getText().toString();
+                if (newWeight == "") {
+                    newWeight = oldWeightText;
+                }
+                int newAgeInt = Integer.parseInt(newAge);
+                int newWeightInt = Integer.parseInt(newWeight);
 
-        // url
-        String edit_url = getIntent().getStringExtra("url");
+                // url
+                String edit_url = getIntent().getStringExtra("url");
+                editPet(edit_url, newAgeInt, newWeightInt);
+            }
+        });
     }
 
     private void editPet(String delUrl, int age, int weight) {
