@@ -23,7 +23,8 @@
         <activity android:name=".CreatePersonActivity" />
         <activity android:name=".CreatePetActivity" />
         <activity android:name=".DeletePersonActivity" />
-        <activity android:name=".DeletePetActivity"></activity>
+        <activity android:name=".DeletePetActivity" />
+        <activity android:name=".EditPetActivity"></activity>
     </application>
 
 </manifest>

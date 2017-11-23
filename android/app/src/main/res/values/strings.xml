@@ -18,5 +18,9 @@
     <string name="editPetButtonText">Edit Pet</string>
     <string name="confirmDeletePersonButtonText">Confirm Delete</string>
     <string name="confirmDeletePetButtonText">Confirm Delete</string>
-
+    <string name="newAgeText">New Age</string>
+    <string name="newWeightText">New Weight</string>
+    <string name="submitPetEditButtonText">Submit Edit</string>
+    <string name="editPetAgeHint">Age</string>
+    <string name="editPetWeightHint">Weight</string>
 </resources>

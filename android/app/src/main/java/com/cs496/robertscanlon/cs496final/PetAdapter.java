@@ -50,6 +50,21 @@ public class PetAdapter extends SimpleAdapter {
             }
         });
 
+        Button editButton;
+        editButton = (Button) v.findViewById(R.id.editPetButton);
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, EditPetActivity.class);
+                intent.putExtra("name", dataList.get(possition).get("name"));
+                intent.putExtra("species", dataList.get(possition).get("species"));
+                intent.putExtra("age", dataList.get(possition).get("age"));
+                intent.putExtra("weight", dataList.get(possition).get("weight"));
+                intent.putExtra("url", dataList.get(possition).get("pet_selfUrl"));
+                mContext.startActivity(intent);
+            }
+        });
+
         return v;
     }
 }
