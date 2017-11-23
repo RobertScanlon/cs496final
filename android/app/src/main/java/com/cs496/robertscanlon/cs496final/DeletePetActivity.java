@@ -46,34 +46,33 @@ public class DeletePetActivity extends AppCompatActivity {
 
     private void deletePet(String delUrl) {
 
-        Log.d("url", delUrl);
-//        Request req = new Request.Builder()
-//                .url(delUrl)
-//                .delete()
-//                .build();
-//
-//        OkHttpClient mOkHttpClient;
-//        mOkHttpClient = new OkHttpClient();
-//        mOkHttpClient.newCall(req).enqueue(new Callback() {
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            @Override
-//            public void onResponse(Call call, final Response response) throws IOException {
-//
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        if (response.code() == 204) {
-//                            ((TextView)findViewById(R.id.deletePetTextView)).setText("Pet Deleted");
-//                        } else {
-//                            ((TextView)findViewById(R.id.deletePetTextView)).setText("Error Deleting Pet");
-//                        }
-//                    }
-//                });
-//            }
-//        });
+        Request req = new Request.Builder()
+                .url(delUrl)
+                .delete()
+                .build();
+
+        OkHttpClient mOkHttpClient;
+        mOkHttpClient = new OkHttpClient();
+        mOkHttpClient.newCall(req).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(Call call, final Response response) throws IOException {
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (response.code() == 204) {
+                            ((TextView)findViewById(R.id.deletePetTextView)).setText("Pet Deleted");
+                        } else {
+                            ((TextView)findViewById(R.id.deletePetTextView)).setText("Error Deleting Pet");
+                        }
+                    }
+                });
+            }
+        });
     }
 }
