@@ -1,3 +1,13 @@
+/****************************************************************************
+ * filename:        ViewPersonsPetsActivity.java
+ *
+ * author:          Robert Scanlon
+ *
+ * description:     CS496 Fall 2017 Final Project
+ *
+ * last edit:       24 November 2017
+ ****************************************************************************/
+
 package com.cs496.robertscanlon.cs496final;
 
 import android.os.Bundle;
@@ -16,10 +26,6 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-/**
- * Created by robert on 11/24/17.
- */
 
 public class ViewPersonsPetsActivity  extends AppCompatActivity {
     @Override

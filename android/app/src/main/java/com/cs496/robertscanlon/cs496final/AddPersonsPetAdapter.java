@@ -1,3 +1,13 @@
+/****************************************************************************
+ * filename:        AddPersonsPetAdapter.java
+ *
+ * author:          Robert Scanlon
+ *
+ * description:     CS496 Fall 2017 Final Project
+ *
+ * last edit:       24 November 2017
+ ****************************************************************************/
+
 package com.cs496.robertscanlon.cs496final;
 
 import android.content.Context;
