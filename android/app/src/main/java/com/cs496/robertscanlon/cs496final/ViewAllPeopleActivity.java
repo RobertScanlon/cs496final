@@ -51,6 +51,12 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
         showAllPeople();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showAllPeople();
+    }
+
     private void showAllPeople() {
 
         Request req = new Request.Builder()

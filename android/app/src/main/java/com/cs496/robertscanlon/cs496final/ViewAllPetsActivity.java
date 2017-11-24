@@ -46,6 +46,12 @@ public class ViewAllPetsActivity extends AppCompatActivity {
         showAllPets();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showAllPets();
+    }
+
     private void showAllPets() {
 
         Request req = new Request.Builder()

@@ -31,12 +31,20 @@ import okhttp3.Response;
 public class ViewFreePetsActivity extends AppCompatActivity {
 
     final String URL = "https://cs496final-186222.appspot.com/pet/free";
+    String person_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_free_pets);
-        showFreePets(getIntent().getStringExtra("person_id"));
+        person_id = getIntent().getStringExtra("person_id");
+        showFreePets(person_id);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showFreePets(person_id);
     }
 
     private void showFreePets(final String person_id) {

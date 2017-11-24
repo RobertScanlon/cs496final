@@ -28,11 +28,21 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class ViewPersonsPetsActivity  extends AppCompatActivity {
+
+    String url;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_persons_pets);
-        showPersonsPets(getIntent().getStringExtra("url"));
+        url = getIntent().getStringExtra("url");
+        showPersonsPets(url);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showPersonsPets(url);
     }
 
     private void showPersonsPets(String url) {
