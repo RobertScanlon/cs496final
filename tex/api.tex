@@ -191,4 +191,9 @@ If the request is successful, the Pet's \texttt{caretaker} attribute is set to
 \texttt{NULL} and the Pet's \texttt{id} string is removed from the Person's
 \texttt{pets} list.
 
+\section*{Get a Person's Pets}
+\texttt{GET /person/:id/pets} \\
+Note: Returns a list of Pets who this person is caretaker for. If the \texttt{id}
+does not identify a Person in the database, a 404 error is returned.
+
 \end{document}

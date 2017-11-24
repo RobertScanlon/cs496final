@@ -180,6 +180,46 @@ def get_all_Pets(self):
 
 
 ##############################################################################
+# returns all People and Pets
+##############################################################################
+def get_all_pets_people(self):
+
+    all_People = []
+    People_Q = ndb.gql("SELECT * FROM Person")
+    for p in People_Q.fetch():
+        odict = collections.OrderedDict()
+        odict['id']      = str(p.id)
+        odict['fname']   = str(p.fname)
+        odict['lname']   = str(p.lname)
+        odict['age']     = str(p.age)
+        odict['address'] = str(p.address)
+        odict['pets']    = p.pets
+        odict['self']    = str(BASE_URL) + \
+                           str("person/") + \
+                           str(p.id)
+        all_People.append(odict)
+
+    all_Pets = []
+    Pets_Q = ndb.gql("SELECT * FROM Pet")
+    for p in Pets_Q.fetch():
+        odict = collections.OrderedDict()
+        odict['id']         = str(p.id)
+        odict['name']       = str(p.name)
+        odict['species']    = str(p.species)
+        odict['age']        = str(p.age)
+        odict['weight']     = str(p.weight)
+        odict['caretaker']  = str(p.caretaker)
+        odict['self']       = str(BASE_URL) + \
+                              str("pet/") + \
+                              str(p.id)
+        all_Pets.append(odict)
+
+    stuff = {}
+    stuff['People'] = all_People
+    stuff['Pets'] = all_Pets
+    self.response.write(json.dumps(stuff))
+
+##############################################################################
 # allows update of a Persons age and address
 ##############################################################################
 def modify_Person(self, id):
@@ -366,8 +406,7 @@ def get_persons_pets(self, id):
 #############################################################################
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, World!')
+        get_all_pets_people(self)
 
 class PersonHandler(webapp2.RequestHandler):
     def post(self):
