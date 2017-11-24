@@ -37,6 +37,8 @@ public class PersonAdapter extends SimpleAdapter {
     public View getView(int pos, View convView, ViewGroup par) {
         final int possition = pos;
         View v = super.getView(pos, convView, par);
+
+        // delete Person Button
         Button deleteButton;
         deleteButton = (Button) v.findViewById(R.id.deletePersonButton);
         deleteButton.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,7 @@ public class PersonAdapter extends SimpleAdapter {
             }
         });
 
+        // edit Person Button
         Button editButton;
         editButton = (Button) v.findViewById(R.id.editPersonButton);
         editButton.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +65,30 @@ public class PersonAdapter extends SimpleAdapter {
                 intent.putExtra("address", dataList.get(possition).get("address"));
                 intent.putExtra("url", dataList.get(possition).get("person_selfUrl"));
                 mContext.startActivity(intent);
+            }
+        });
+
+        // view Pets Button
+        Button viewPetsButton;
+        viewPetsButton = (Button) v.findViewById(R.id.personViewPetsButton);
+        viewPetsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, ViewPersonsPetsActivity.class);
+                intent.putExtra("fname", dataList.get(possition).get("fname"));
+                intent.putExtra("lname", dataList.get(possition).get("lname"));
+                intent.putExtra("url", dataList.get(possition).get("person_selfUrl"));
+                mContext.startActivity(intent);
+            }
+        });
+
+        // add pets button
+        Button addPetButton;
+        addPetButton = (Button) v.findViewById(R.id.personAddPetsButton);
+        addPetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

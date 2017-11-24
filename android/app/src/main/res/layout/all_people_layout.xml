@@ -30,6 +30,7 @@
 
         <Button
             android:id="@+id/deletePersonButton"
+            android:textSize="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/deletePersonButtonText" />
@@ -37,9 +38,23 @@
         <Button
             android:id="@+id/editPersonButton"
             android:layout_width="wrap_content"
+            android:textSize="10dp"
             android:layout_height="wrap_content"
             android:text="@string/editPersonButtonText"/>
 
+        <Button
+            android:id="@+id/personViewPetsButton"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personViewPetsButtonText" />
+
+        <Button
+            android:id="@+id/personAddPetsButton"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personAddPetsButtonText" />
     </LinearLayout>
 
 </LinearLayout>
