@@ -88,7 +88,9 @@ public class PersonAdapter extends SimpleAdapter {
         addPetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(mContext, ViewFreePetsActivity.class);
+                intent.putExtra("person_id", dataList.get(possition).get("person_id"));
+                mContext.startActivity(intent);
             }
         });
 

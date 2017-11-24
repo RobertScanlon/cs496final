@@ -31,4 +31,5 @@
     <string name="editPersonAddressHint">Weight</string>
     <string name="personViewPetsButtonText">View Pets</string>
     <string name="personAddPetsButtonText">Add Pet</string>
+    <string name="confirmAddPetButtonText">Add Pet</string>
 </resources>

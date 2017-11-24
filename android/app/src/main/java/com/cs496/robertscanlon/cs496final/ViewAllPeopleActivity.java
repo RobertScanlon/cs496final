@@ -67,6 +67,8 @@ public class ViewAllPeopleActivity extends AppCompatActivity {
                     for (int i = 0; i < items.length(); i++) {
                         HashMap<String,String> p;
                         p = new HashMap<String,String>();
+                        p.put("person_id",
+                                items.getJSONObject(i).getString("id"));
                         p.put("fname", "First Name: " +
                                 items.getJSONObject(i).getString("fname"));
                         p.put("lname", "Last Name: " +

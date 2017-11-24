@@ -1,15 +1,20 @@
 package com.cs496.robertscanlon.cs496final;
 
-import android.app.DownloadManager;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -19,32 +24,33 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class RemovePersonsPetActivity extends AppCompatActivity {
-
+public class AddPersonsPetActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_remove_persons_pet);
-        TextView removePetTextView = (TextView) findViewById(R.id.removePetTextView);
-        removePetTextView.setText("Remove Pet: " + getIntent().getStringExtra("name") +
+        setContentView(R.layout.activity_add_persons_pet);
+        TextView addPetTextView = (TextView) findViewById(R.id.AddPetTextView);
+        addPetTextView.setText("Add Pet: " + getIntent().getStringExtra("name") +
                 " " + getIntent().getStringExtra("species"));
 
-        Button removeButton = (Button) findViewById(R.id.confirmRemovePetButton);
-        removeButton.setOnClickListener(new View.OnClickListener() {
+        Button addButton = (Button) findViewById(R.id.confirmAddPetButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                removePet(getIntent().getStringExtra("url"));
+                addPet(getIntent().getStringExtra("url"),
+                       getIntent().getStringExtra("person_id"));
             }
         });
     }
 
-    private void removePet(String url) {
+    private void addPet(String url, String person_id) {
         final MediaType JSON = MediaType.parse("application/json");
-        String body = "";
+        String body = "{\"person_id\": " + "\"" + person_id + "\"}";
         Request req = new Request.Builder()
                 .url(url + "/caretaker")
-                .patch(RequestBody.create(JSON, body))
+                .put(RequestBody.create(JSON, body))
                 .build();
+
 
         OkHttpClient mOkHttpClient;
         mOkHttpClient = new OkHttpClient();
@@ -59,11 +65,11 @@ public class RemovePersonsPetActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                    if (response.code() == 200) {
-                        ((TextView)findViewById(R.id.removePetTextView)).setText("Pet Removed");
-                    } else {
-                        ((TextView)findViewById(R.id.removePetTextView)).setText("Error Removing Pet");
-                    }
+                        if (response.code() == 200) {
+                            ((TextView)findViewById(R.id.AddPetTextView)).setText("Pet Added");
+                        } else {
+                            ((TextView)findViewById(R.id.AddPetTextView)).setText("Error Adding Pet");
+                        }
                     }
                 });
             }
