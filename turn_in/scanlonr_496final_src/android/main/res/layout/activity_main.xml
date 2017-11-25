@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cs496.robertscanlon.cs496final.MainActivity">
+
+
+    <Button
+        android:id="@+id/viewAllPeopleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/allPeopleButtonText" />
+
+    <Button
+        android:id="@+id/viewAllPetsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/allPetsButtonText" />
+
+    <Button
+        android:id="@+id/addPersonButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/newPersonButtonText" />
+
+    <Button
+        android:id="@+id/addPetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/newPetButtonText" />
+</LinearLayout>
