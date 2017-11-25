@@ -1,7 +1,7 @@
 # filename:     main.py
 # author:       Robert Scanlon
 # description:  backend code for CS496 final project
-# last edit:    16 November 2017
+# last edit:    25 November 2017
 
 import webapp2
 from google.appengine.ext import ndb
@@ -228,6 +228,10 @@ def modify_Person(self, id):
         self.response.status_int = 404
         return
     modify_data = json.loads(self.request.body)
+    if 'fname' in modify_data:
+        person.fname = str(modify_data['fname'])
+    if 'lname' in modify_data:
+        person.lname = str(modify_data['lname'])
     if 'age' in modify_data:
         person.age = int(modify_data['age'])
     if 'address' in modify_data:
@@ -245,6 +249,10 @@ def modify_Pet(self, id):
         self.response.status_int = 404
         return
     modify_data = json.loads(self.request.body)
+    if 'name' in modify_data:
+        pet.name = str(modify_data['name'])
+    if 'species' in modify_data:
+        pet.species = str(modify_data['species'])
     if 'age' in modify_data:
         pet.age = int(modify_data['age'])
     if 'weight' in modify_data:

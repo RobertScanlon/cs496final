@@ -22,14 +22,22 @@
     <string name="newAgeText">New Age</string>
     <string name="newWeightText">New Weight</string>
     <string name="submitPetEditButtonText">Submit Edit</string>
+    <string name="editPetSpeciesHint">Species</string>
     <string name="editPetAgeHint">Age</string>
     <string name="editPetWeightHint">Weight</string>
+    <string name="newFnameText">New Fist Name</string>
+    <string name="newLnameText">New Last Name</string>
     <string name="newPersonAgeText">New Age</string>
-    <string name="newAddressText">New Weight</string>
+    <string name="newAddressText">New Address</string>
     <string name="submitPersonEditButtonText">Submit Edit</string>
     <string name="editPersonAgeHint">Age</string>
-    <string name="editPersonAddressHint">Weight</string>
+    <string name="editPersonAddressHint">Address</string>
     <string name="personViewPetsButtonText">View Pets</string>
     <string name="personAddPetsButtonText">Add Pet</string>
     <string name="confirmAddPetButtonText">Add Pet</string>
+    <string name="editPersonFnameHint">First Name</string>
+    <string name="editPersonLnameHint">Last Name</string>
+    <string name="newSpeciesText">New Species</string>
+    <string name="editPetNameHint">Name</string>
+    <string name="newNameText">New Name</string>
 </resources>

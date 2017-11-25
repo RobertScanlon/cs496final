@@ -5,7 +5,7 @@
  *
  * description:     CS496 Fall 2017 Final Project
  *
- * last edit:       24 November 2017
+ * last edit:       25 November 2017
  ****************************************************************************/
 
 package com.cs496.robertscanlon.cs496final;
@@ -54,9 +54,13 @@ public class EditPetActivity extends AppCompatActivity {
         oldWeight.setText(oldWeightText);
 
         // set hints
+        final EditText newNameTextEdit = (EditText)findViewById(R.id.newNameEditText);
+        final EditText newSpeciesTextEdit = (EditText)findViewById(R.id.newSpeciesEditText);
         final EditText newAgeTextEdit = (EditText)findViewById(R.id.newAgeEditText);
         final EditText newWeightEditText = (EditText)findViewById(R.id.newWeightEditText);
 
+        newNameTextEdit.setHint(oldNameText);
+        newSpeciesTextEdit.setHint(oldSpeciesText);
         newAgeTextEdit.setHint(oldAgeText);
         newWeightEditText.setHint(oldWeightText);
 
@@ -76,17 +80,28 @@ public class EditPetActivity extends AppCompatActivity {
                 int newAgeInt = Integer.parseInt(newAge);
                 int newWeightInt = Integer.parseInt(newWeight);
 
+                String newName = newNameTextEdit.getText().toString();
+                if (newName == "") {
+                    newName = oldNameText;
+                }
+
+                String newSpecies = newSpeciesTextEdit.getText().toString();
+                if (newSpecies == "") {
+                    newSpecies = oldSpeciesText;
+                }
+
                 // url
                 String edit_url = getIntent().getStringExtra("url");
-                editPet(edit_url, newAgeInt, newWeightInt);
+                editPet(edit_url, newAgeInt, newWeightInt, newName, newSpecies);
             }
         });
     }
 
-    private void editPet(String delUrl, int age, int weight) {
+    private void editPet(String delUrl, int age, int weight, String name, String species) {
 
         final MediaType JSON = MediaType.parse("application/json");
-        String body = "{\"age\": " + age + ", \"weight\":" + weight + "}";
+        String body = "{\"name\": \"" + name + "\", \"species\": \"" +
+                species + "\", \"age\": " + age + ", \"weight\":" + weight + "}";
 
         Request req = new Request.Builder()
                 .url(delUrl)

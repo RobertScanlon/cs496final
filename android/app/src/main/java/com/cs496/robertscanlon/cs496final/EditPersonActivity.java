@@ -5,7 +5,7 @@
  *
  * description:     CS496 Fall 2017 Final Project
  *
- * last edit:       24 November 2017
+ * last edit:       25 November 2017
  ****************************************************************************/
 
 package com.cs496.robertscanlon.cs496final;
@@ -53,9 +53,13 @@ public class EditPersonActivity extends AppCompatActivity {
         oldAddress.setText(oldAddressText);
 
         // set hints
+        final EditText newFnameTextEdit = (EditText)findViewById(R.id.newFnameEditText);
+        final EditText newLnameTextEdit = (EditText)findViewById(R.id.newLnameEditText);
         final EditText newAgeTextEdit = (EditText)findViewById(R.id.newPersonAgeEditText);
         final EditText newAddressEditText = (EditText)findViewById(R.id.newAddressEditText);
 
+        newFnameTextEdit.setHint(oldFnameText);
+        newLnameTextEdit.setHint(oldLnameText);
         newAgeTextEdit.setHint(oldAgeText);
         newAddressEditText.setHint(oldAddressText);
 
@@ -68,20 +72,32 @@ public class EditPersonActivity extends AppCompatActivity {
                 if (newAge == "") {
                     newAge = oldAgeText;
                 }
+
+                String newFname = newFnameTextEdit.getText().toString();
+                if (newFname == "") {
+                    newFname = oldFnameText;
+                }
+
+                String newLname = newLnameTextEdit.getText().toString();
+                if (newLname == "") {
+                    newLname = oldLnameText;
+                }
+
                 int newAgeInt = Integer.parseInt(newAge);
                 String newAddress = newAddressEditText.getText().toString();
 
                 // url
                 String edit_url = getIntent().getStringExtra("url");
-                editPerson(edit_url, newAgeInt, newAddress);
+                editPerson(edit_url, newAgeInt, newAddress, newFname, newLname);
             }
         });
     }
 
-    private void editPerson(String delUrl, int age, String addr) {
+    private void editPerson(String delUrl, int age, String addr, String fname, String lname) {
 
         final MediaType JSON = MediaType.parse("application/json");
-        String body = "{\"age\": " + age + ", \"address\": \"" + addr + "\"}";
+        String body = "{\"fname\": \"" + fname + "\", \"lname\": \"" + lname +
+                "\", \"age\": " + age + ", \"address\": \"" + addr + "\"}";
 
         Request req = new Request.Builder()
                 .url(delUrl)

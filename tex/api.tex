@@ -132,13 +132,17 @@ status code 400 Bad Request.
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
+	fname         & String        & New First Name of Person \\
+	\hline
+	lname         & String        & New Last Name of Person \\
+	\hline
 	age           & integer       & New age of Person (years) \\
 	\hline
 	address       & string        & New address of Person \\
 	\hline
 \end{tabular}
 \\
-Note: The \texttt{id}, \texttt{fname}, \texttt{lname}, and \texttt{pets}
+Note: The \texttt{id}, and \texttt{Pets[]}
 Person attributes cannot be modified through this request.
 
 \section*{Modify a Pet}
@@ -148,13 +152,17 @@ Person attributes cannot be modified through this request.
 	\hline
 	\textbf{Name} & \textbf{Type} & \textbf{Description} \\
 	\hline
+	name          & String         & New Name of Pet \\
+	\hline
+	species       & String         & New Species of Pet \\
+	\hline
 	age           & integer        & New age of Pet (years) \\
 	\hline
 	weight        & integer        & New weight of Pet (lbs) \\
 	\hline
 \end{tabular}
 \\
-Note: The \texttt{id}, \texttt{name}, \texttt{species} and \texttt{caretaker} 
+Note: The \texttt{id}, \texttt{caretaker} 
 Pet attributes cannot be modified though this request.
 
 \section*{Delete a Person}
