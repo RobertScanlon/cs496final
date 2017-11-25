@@ -7,6 +7,13 @@ Robert Scanlon \\
 CS 496 Fall 2017 \\
 Final Project
 
+\section*{Simple Pet Shelter API}
+This API implements a system which can be used by a small animal shelter to
+keep track of animals and volunteers. People and Pet entities can be
+added, removed, and modified within the database. People can also be assigned to
+act as `caretakers' for animals. Each animal in the database can have either 
+zero or one caretaker. People can act as caretaker for zero or more animals.
+
 \section*{People Objects}
 People objects are returned with the following properties. \\
 \begin{tabular}{| l | l | l |}
@@ -15,7 +22,7 @@ People objects are returned with the following properties. \\
 	\hline
 	id                    & String          & url safe identifier \\
 	\hline
-	self                  & Url String      & link to self (not an intrisic property of People objects; \\
+	self                  & Url String      & link to self (not an intrinsic property of People objects; \\
 	                      &                 & added when request is made) \\
 	\hline
 	fname		      & String          & first name of person \\
@@ -39,7 +46,7 @@ Pet objects are returned with the following properties. \\
 	\hline
 	id                    & String          & url safe identifier \\
 	\hline
-	self                  & Url String      & link to self (not an intrisic property of Pet objects; \\
+	self                  & Url String      & link to self (not an intrinsic property of Pet objects; \\
 	                      &                 & added when request is made) \\
 	\hline
 	name		      & String          & name of pet \\
@@ -51,7 +58,7 @@ Pet objects are returned with the following properties. \\
 	weight                & Integer         & weight of pet \\
 	\hline
 	caretaker             & String          & id of the person who is caretaker for this pet, \\
-	                      &                 & NULL if the pet does not curretly have a caretaker \\
+	                      &                 & NULL if the pet does not currently have a caretaker \\
 	\hline
 \end{tabular}
 
@@ -67,8 +74,8 @@ database) and "Pets" (a json list of all Pets in the database).
 \section*{Get a single Person}
 \texttt{GET /person/:id} \\
 \textbf{Note:} A request containing a valid id string which does not
-identidy a Person in the database will return a 404 status code. A request
-containing an invaid id string will return a status code 500 server error.
+identify a Person in the database will return a 404 status code. A request
+containing an invalid id string will return a status code 500 server error.
 
 \section*{Get all Pets}
 \texttt{GET /pet} \\
@@ -77,8 +84,8 @@ containing an invaid id string will return a status code 500 server error.
 \section*{Get single Pet}
 \texttt{GET /pet/:id} \\
 \textbf{Note:} A request containing a valid id string which does not
-identidy a Pet in the database will return a 404 status code. A request
-containing an invaid id string will return a status code 500 server error.
+identify a Pet in the database will return a 404 status code. A request
+containing an invalid id string will return a status code 500 server error.
 
 \section*{Create a new Person}
 \texttt{POST /person} \\
@@ -177,16 +184,16 @@ Note: This request will return a JSON array of all Pets in the database whose
 	\hline
 \end{tabular} \\
 Note: If the Pet identified by the \texttt{id} in the url already has a caretaker,
-the \texttt{id} in the url does not match a Pet in the databse, or the \texttt{id}
-passed in the request body does not match a person in the databse, a \texttt{400} error code
+the \texttt{id} in the url does not match a Pet in the database, or the \texttt{id}
+passed in the request body does not match a person in the database, a \texttt{400} error code
 is returned along with an appropriate error message. If the request is successful the Pet's
 \texttt{caretaker} is updated, along with the Person's \texttt{pets} list.
 
 \section*{Remove Care Relationship}
 \texttt{PATCH /pet/:id/caretaker} \\
-Note: If the \texttt{id} passed in the url does not identify a Pet in the databse,
+Note: If the \texttt{id} passed in the url does not identify a Pet in the database,
 or the person \texttt{id} of this Pets \texttt{caretaker} does not identify a Person
-in the databse, a \texttt{400} error is returned with the appropriate message.
+in the database, a \texttt{400} error is returned with the appropriate message.
 If the request is successful, the Pet's \texttt{caretaker} attribute is set to
 \texttt{NULL} and the Pet's \texttt{id} string is removed from the Person's
 \texttt{pets} list.

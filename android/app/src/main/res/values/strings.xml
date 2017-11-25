@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CS496Final</string>
+    <string name="app_name">CS496Final: Pet Shelter</string>
     <string name="allPeopleButtonText">View All People</string>
     <string name="allPetsButtonText">View All Pets</string>
     <string name="newPersonButtonText">Create a New Person</string>
